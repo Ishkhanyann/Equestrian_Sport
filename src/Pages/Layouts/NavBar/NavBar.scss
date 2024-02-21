@@ -1,0 +1,44 @@
+$main-color-0: #eae5e1;
+$main-color-1: #faedd8;
+$main-color-2: #d9c19d;
+$main-color-3: #b7966b;
+$main-color-4: #946d43;
+$main-color-5: #724a24;
+$main-color-6: #502b0f;
+$main-color-7: #2e1402;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.NavBar {
+  width: 100%;
+  height: 60px;
+  background-color: $main-color-1;
+  border: 1px solid $main-color-6;
+
+  header,nav{
+    height: 60px;
+  }
+
+  ul {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li {
+      list-style-type: none;
+      font-size: 25px;
+      padding: 30px;
+      font-family: Nunito;
+
+      a{
+        text-decoration: none;
+        color: $main-color-6;
+      }
+    }
+  }
+}
