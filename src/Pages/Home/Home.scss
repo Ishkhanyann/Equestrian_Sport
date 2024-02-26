@@ -1,12 +1,22 @@
-$main-color-0: #ffefe2;
-$main-color-1: #fbeed7;
-$main-color-2: #d9c19d;
-$main-color-3: #b7966b;
-$main-color-4: #946d43;
-$main-color-5: #724a24;
-$main-color-6: #502b0f;
-$main-color-7: #2e1402;
+// $main-color-0.0: #eae5e1;
+// $main-color-1.1: #faedd8;
+// $main-color-2.2: #d9c19d;
+// $main-color-3.3: #b7966b;
+// $main-color-4.4: #946d43;
+// $main-color-5.5: #724a24;
+// $main-color-6.6: #502b0f;
+// $main-color-7.7: #2e1402;
+$main-color-0: #e9e9e5;
+$main-color-1: #ededeb;
+$main-color-2: #9c8d77;
+$main-color-3: #bfb6aa;
+$main-color-4: #a89f93;
+$main-color-5: #c7c3ba;
+$main-color-6: #cfc9bb;
+$main-color-7: #dddad1;
+$main-color-8: #626262;
+$main-color-9: #2e1402;
 
 body{
-    background-color: rgba($main-color-0, 0.7)
+    background-color: $main-color-0;
 }
