@@ -3,8 +3,8 @@ import "./Home.scss";
 
 export default function Home() {
   return (
-    <div>
-      <div>
+    <div className="Home">
+      <div className="Home-main">
         <h1>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo,
           mollitia?
@@ -15,7 +15,6 @@ export default function Home() {
           corporis magni est ipsa, repellat veritatis pariatur at.
         </p>
       </div>
-      <img src="../../public/H/H-main.jpg" alt="" />
     </div>
   );
 }
