@@ -8,7 +8,7 @@ export default function Layouts() {
     <div className='Layouts'>
       <NavBar/>
       <Outlet/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 body {
   background-color: $main-color-0;
@@ -8,20 +8,30 @@ body {
   font-family: Quicksand;
   .Home-main {
     width: 100%;
-    position: relative;
-    text-align: center;
+    height: 470px;
+    background-image: url("../../public/H/H-main.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
 
-    img {
-      position: absolute;
-      // width: 1000px;
-      
-    }
+    .Home-title{
+      width: 1000px;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      font-size: 23px;  
+      color: $main-color-2;
 
-    .Home-mainTitle{
-      position: relative;
-      font-size: 20px;
-      text-align: center;
+      h1,span{
+        padding-left: 50px;
+        padding-top: 20px;
+      }
 
+      span{
+        width: 400px;
+      }
     }
   }
 }
