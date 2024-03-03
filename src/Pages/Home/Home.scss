@@ -6,32 +6,99 @@ body {
 
 .Home {
   font-family: Quicksand;
+
   .Home-main {
+    padding-top: 50px;
     width: 100%;
-    height: 470px;
-    background-image: url("../../public/H/H-main.jpg");
+    height: 500px;
+    background-image: url("../../public/E/H-main_LE_photos_v2_x2.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom right;
 
-    .Home-title{
+    .Home-title {
       width: 1000px;
       height: 450px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
-      font-size: 23px;  
+      font-size: 23px;
       color: $main-color-2;
 
-      h1,span{
+      h1,
+      span {
         padding-left: 50px;
         padding-top: 20px;
       }
 
-      span{
+      span {
         width: 400px;
       }
     }
+  }
+
+  .Home-WCU {
+    margin-top: 90px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 380px 520px 380px 380px;
+    grid-template-rows: 220px 220px;
+    grid-template-areas:
+      "about1 img about2 about2"
+      "about3 img about4 about5";
+
+    .Home-about1 {
+      @include grid-box;
+      grid-area: about1;
+    }
+    .Home-img {
+      background-image: url("../../../public/E/H-why_choose_us_LE_photos_v2_x2.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-area: img;
+    }
+    .Home-about2 {
+      padding: 20px;
+      border: 1px solid $main-color-6;
+      color: $main-color-9;
+      grid-area: about2;
+      background-color: $main-color-3;
+      text-align: right;
+
+      h3{
+        font-size: 24px;
+      }
+
+      p {
+        margin: 10px;
+        font-family: $font3;
+        font-size: 20px;
+      }
+    }
+    .Home-about3 {
+      @include grid-box;
+      grid-area: about3;
+    }
+    .Home-about4 {
+      @include grid-box;
+      grid-area: about4;
+    }
+    .Home-about5 {
+      @include grid-box;
+      grid-area: about5;
+    }
+  }
+
+  .Home-Piranha{
+    margin-top: 90px;
+    width: 100%;
+    height: 600px;
+    background-image: url("../../../public/E/HHH.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    background-position: 73% 34%;
   }
 }

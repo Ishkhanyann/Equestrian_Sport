@@ -7,11 +7,10 @@
 }
 
 .NavBar {
-  // position: fixed;
+  position: fixed;
   width: 100%;
   height: 60px;
   background-color: $main-color-7;
-  border: 1px solid $main-color-0;
 
   header,nav{
     height: 60px;

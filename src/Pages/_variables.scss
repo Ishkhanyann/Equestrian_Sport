@@ -8,6 +8,28 @@ $main-color-6: #cfc9bb;
 $main-color-7: #dddad1;
 $main-color-8: #626262;
 $main-color-9: #2e1402;
-$font1: 'Krub';
-$font2: 'Playfair Display';
-$font3: 'Quicksand';
+$font1: "Krub";
+$font2: "Playfair Display";
+$font3: "Quicksand";
+
+@mixin grid-box {
+  background-color: $main-color-3;
+  padding: 20px;
+  color: $main-color-9;
+  border: 1px solid $main-color-6;
+
+  img {
+    width: 50px;
+  }
+  span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  p {
+    margin: 10px;
+    font-family: $font3;
+    font-size: 16px;
+  }
+}
