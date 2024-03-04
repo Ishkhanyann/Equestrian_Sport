@@ -1,1 +1,1 @@
-font-family - Krub, Playfair Display, Quicksand
+grid 41 x 18 30px

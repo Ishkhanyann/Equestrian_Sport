@@ -3,6 +3,7 @@ import "./Home.scss";
 import HomeMain from "./Home-Parts/HomeMain";
 import HomeWCU from "./Home-Parts/HomeWCU";
 import HomePiranha from "./Home-Parts/HomePiranha";
+import HomeHistory from "./Home-Parts/HomeHistory";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HomeMain />
       <HomeWCU />
       <HomePiranha/>
+      <HomeHistory/>
     </div>
   );
 }
