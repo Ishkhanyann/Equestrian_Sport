@@ -4,6 +4,7 @@ import HomeMain from "./Home-Parts/HomeMain";
 import HomeWCU from "./Home-Parts/HomeWCU";
 import HomePiranha from "./Home-Parts/HomePiranha";
 import HomeHistory from "./Home-Parts/HomeHistory";
+import HomeHorses from "./Home-Parts/HomeHorses";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeWCU />
       <HomePiranha/>
       <HomeHistory/>
+      <HomeHorses/>
     </div>
   );
 }
