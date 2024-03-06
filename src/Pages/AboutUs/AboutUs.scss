@@ -1,0 +1,92 @@
+@import "../variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.AboutUs {
+  font-family: $font-title;
+
+  .AboutUsHeader {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    padding-top: 60px;
+    justify-content: space-between;
+
+    .AboutUs-imgs {
+      z-index: -2;
+      width: 50%;
+      height: 800px;
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 650px;
+        right: -5%;
+        top: 15%;
+      }
+
+      .AboutUs-color1 {
+        position: absolute;
+        width: 550px;
+        height: 400px;
+        background-color: $main-color-4;
+      }
+
+      .AboutUs-color2 {
+        position: absolute;
+        width: 650px;
+        height: 550px;
+        border: 4px solid $main-color-2;
+        top: 8%;
+        left: 10%;
+        z-index: -1;
+      }
+    }
+
+    .AboutUs-main{
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      line-height: 1.4;
+      font-weight: 600;
+      margin-right: 50px;
+
+
+      h1{
+        font-family: $font-header;
+        font-size: 28px;
+        padding-bottom: 60px;
+      }
+
+      p{
+        font-family: $font-title;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .AboutUs-About{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 90px;
+    width: 95%;
+
+    img{
+      width: 550px;
+      border-top-left-radius: 150px;
+      display: inline-block;
+    }
+
+    .AboutUs-Container{
+      
+    }
+
+  }
+}

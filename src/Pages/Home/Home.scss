@@ -1,15 +1,12 @@
 @import "../variables";
 
-* {
-  box-sizing: border-box;
-}
-
 body {
+  box-sizing: border-box;
   background-color: $main-color-0;
 }
 
 .Home {
-  // font-family: Quicksand;
+  font-family: $font-title;
 
   .Home-main {
     padding-top: 50px;
@@ -27,9 +24,13 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: start;
-      font-size: 23px;
       color: $main-color-2;
-
+      font-size: 24px;
+      
+      h1{
+        font-family: $font-header;
+      }
+      
       h1,
       span {
         padding-left: 50px;
@@ -39,6 +40,7 @@ body {
 
       span {
         width: 400px;
+        font-weight: 600;
       }
     }
   }
@@ -73,13 +75,15 @@ body {
       line-height: 1.4;
 
       h3 {
-        font-size: 24px;
+        font-size: 28px;
+        font-family: $font-header;
       }
 
       p {
         margin: 10px;
-        // font-family: $font3;
-        font-size: 20px;
+        font-family: $font-title;
+        font-size: 22px;
+        font-weight: 600;
       }
     }
     .Home-about3 {
@@ -137,9 +141,9 @@ body {
     }
 
     .Home-Text {
-      // font-family: $font3;
+      font-family: $font-title;
       width: 40%;
-      font-size: 20px;
+      font-size: 22px;
       line-height: 1.4;
       color: $main-color-9;
       font-weight: 600;
