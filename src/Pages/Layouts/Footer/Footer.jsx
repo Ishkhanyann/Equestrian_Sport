@@ -4,9 +4,9 @@ import "./Footer.scss";
 
 export default function Footer() {
   const [icons] = useState([
-    "https://i.pinimg.com/originals/a3/be/88/a3be8829747c290a0ab9d09918979c04.png",
-    "https://totiequestrian.com/cdn/shop/files/Toti_Emblem_Prmry_Color.png?v=1667506479",
-    "https://inside.fei.org/sites/default/files/pictures/FEI_Logo_RGB_Purple_HR.png"
+    "../../../public/Icons/F-logo2.png",
+    "../../../public/Icons/F-logo1.png",
+    "../../../public/Icons/F-logo3.png",
   ])
   const [footer, setFooter] = useState([
     {

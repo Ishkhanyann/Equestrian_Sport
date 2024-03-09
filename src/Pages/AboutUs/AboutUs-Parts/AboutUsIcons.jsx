@@ -1,13 +1,20 @@
-import React, { useState } from 'react'
-import { GiPlantsAndAnimals } from "react-icons/gi";
+import React, { useState } from "react";
 
 export default function AboutUsIcons() {
   const [icons] = useState([
-
-  ])
+    "../../../public/Icons/A-logo1.png",
+    "../../../public/Icons/A-logo2.png",
+    "../../../public/Icons/A-logo3.png",
+    "../../../public/Icons/A-logo4.png",
+    "../../../public/Icons/A-logo5.png",
+  ]);
   return (
-    <div className='AboutUs-icons'>
-      
+    <div className="AboutUs-icons">
+      {icons.map((e, index) => {
+        return <span key={index}>
+          <img src={e} alt="" />
+        </span>;
+      })}
     </div>
-  )
+  );
 }
