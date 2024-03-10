@@ -12,7 +12,7 @@ export default function AboutUsIcons() {
     <div className="AboutUs-icons">
       {icons.map((e, index) => {
         return <span key={index}>
-          <img src={e} alt="" />
+          <img className={`AboutUsDesign${index}`} src={e} alt="" />
         </span>;
       })}
     </div>

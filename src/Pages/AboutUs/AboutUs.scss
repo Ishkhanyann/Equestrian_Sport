@@ -144,15 +144,31 @@
   }
 
   .AboutUs-icons {
-    width: 1200px;
-    height: 200px;
+    margin-top: 90px;
+    margin-left: 40px;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 
-    img{
-      width: 250px;
+    .AboutUsDesign0 {
+      width: 150px;
+    }
+    .AboutUsDesign1 {
+      width: 300px;
+      margin-left: 50px;
+    }
+    .AboutUsDesign2 {
+      width: 300px;
+    }
+    .AboutUsDesign3 {
+      width: 230px;
+      margin-right: 20px;
+    }
+    .AboutUsDesign4 {
+      width: 320px;
     }
   }
 }

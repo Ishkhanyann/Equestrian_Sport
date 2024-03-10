@@ -9,7 +9,7 @@ export default function AboutUs() {
     <div className='AboutUs'>
       <AboutUsHeader/>
       <AboutUsAbout/>
-      {/* <AboutUsIcons/> */}
+      <AboutUsIcons/>
     </div>
   )
 }
