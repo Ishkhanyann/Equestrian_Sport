@@ -26,11 +26,11 @@ body {
       align-items: start;
       color: $main-color-2;
       font-size: 24px;
-      
-      h1{
+
+      h1 {
         font-family: $font-header;
       }
-      
+
       h1,
       span {
         padding-left: 50px;
@@ -49,8 +49,8 @@ body {
     margin-top: 90px;
     width: 100%;
     display: grid;
-    grid-template-columns: 380px 520px 380px 380px;
-    grid-template-rows: 220px 220px;
+    grid-template-columns: 380px 520px 382px 382px;
+    grid-template-rows: 250px 250px;
     grid-template-areas:
       "about1 img about2 about2"
       "about3 img about4 about5";
@@ -147,6 +147,62 @@ body {
       line-height: 1.4;
       color: $main-color-10;
       font-weight: 800;
+    }
+  }
+
+  .HomeSlide {
+    margin-top: 90px;
+
+    .slick-slider {
+      position: relative;
+
+      .slick-list {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+
+      .slick-track {
+        display: flex;
+
+        .slick-slide {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+          }
+
+          .slide-content {
+            width: 100%;
+            position: absolute;
+            top: 300px;
+            left: 0;
+            text-align: center;
+            padding: 20px;
+
+            h1 {
+              color: $main-color-10;
+              font-size: 44px;
+              margin-bottom: 10px;
+              font-family: $font-header;
+            }
+
+            p {
+              font-family: $font-title;
+              line-height: 1.4;
+              color: $main-color-10;
+              font-size: 34px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .slick-slide.slick-active {
+      display: block;
     }
   }
 
