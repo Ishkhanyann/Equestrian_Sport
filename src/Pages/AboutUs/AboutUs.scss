@@ -171,4 +171,28 @@
       width: 320px;
     }
   }
+
+  .AboutUs-Competitions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .competitionsContainer{
+      width: 820px;
+      display: flex;
+
+      .aboutCompetitions{
+        width: 410px;
+      }
+
+      .competitionImg{
+        width: 410px;
+        img{
+          width: 410px;
+        }
+      }
+    }
+  }
 }

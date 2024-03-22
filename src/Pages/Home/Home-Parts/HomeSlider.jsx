@@ -10,11 +10,11 @@ export default function HomeSlide() {
     dots: false,
     arrows: false, 
     infinite: true,
-    speed: 2000,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
   };
   return (
     <div className='HomeSlide'>
