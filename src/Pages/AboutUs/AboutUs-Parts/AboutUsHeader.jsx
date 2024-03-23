@@ -3,7 +3,7 @@ import "../AboutUs.scss";
 
 export default function AboutUsHeader() {
   return (
-    <div className="AboutUsHeader">
+    <div className="AboutUs-Header">
       <div className="AboutUs-imgs">
         <div className="AboutUs-color1"></div>
         <div className="AboutUs-color2"></div>

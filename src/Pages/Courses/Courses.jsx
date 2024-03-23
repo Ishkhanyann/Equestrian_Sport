@@ -1,10 +1,13 @@
 import React from 'react'
 import "./Courses.scss"
+import CoursesMain from './Courses-Parts/CoursesMain'
+import CoursesDisciplines from './Courses-Parts/CoursesDisciplines'
 
 export default function Courses() {
   return (
-    <div>
-      <h1>Courses</h1>
+    <div className='Courses'>
+      <CoursesMain/>
+      <CoursesDisciplines/>
     </div>
   )
 }

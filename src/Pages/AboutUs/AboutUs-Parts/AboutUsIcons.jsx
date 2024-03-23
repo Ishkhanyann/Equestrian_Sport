@@ -9,7 +9,7 @@ export default function AboutUsIcons() {
     "../../../public/Icons/A-logo5.png",
   ]);
   return (
-    <div className="AboutUs-icons">
+    <div className="AboutUs-Icons">
       {icons.map((e, index) => {
         return <span key={index}>
           <img className={`AboutUsDesign${index}`} src={e} alt="" />
