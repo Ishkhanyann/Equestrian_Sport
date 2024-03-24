@@ -11,7 +11,7 @@ const initalSlidesValue = [
     id: 2,
     title: "Ben Maher",
     desc: "Riding a horse is like flying a plane, they’re not machines but it’s a lot of hours, a lot of time to go into building the relationship.",
-    image: "../../../public/E/H-slide0.jpg",
+    image: "../../../public/E/H-slide2.jpg",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const initalSlidesValue = [
     id: 4,
     title: "Scott Brash",
     desc: "You can never stop learning, and the most we can learn from our horses.",
-    image: "../../../public/E/H-slide6.jpg",
+    image: "../../../public/E/H-slide4.jpg",
   },
   {
     id: 5,

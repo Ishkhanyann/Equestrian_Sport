@@ -24,7 +24,7 @@ body {
       font-weight: 600;
       font-size: 22px;
 
-      h1{
+      h1 {
         padding-bottom: 20px;
       }
     }
@@ -39,9 +39,9 @@ body {
         width: 700px;
         height: 400px;
         background-color: $main-color-2;
-        left: 140px;
+        left: 130px;
       }
-      
+
       .border {
         position: absolute;
         z-index: 1;
@@ -61,11 +61,60 @@ body {
     }
   }
 
-  .CoursesDisciplines{
-    margin-top: 150px;
+  .CoursesDisciplines {
+    margin-top: 200px;
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .Images {
+      width: 670px;
+      height: 450px;
+      border: 4px solid $main-color-10;
+      position: relative;
+
+      .jumping {
+        width: 290px;
+        position: absolute;
+        top: 48px;
+        left: -155px;
+      }
+
+      .race {
+        width: 310px;
+        position: absolute;
+        left: 175px;
+        top: -50px;
+      }
+
+      .dressage {
+        position: absolute;
+        width: 310px;
+        left: 175px;
+        top: 250px;
+      }
+
+      .eventing {
+        position: absolute;
+        width: 290px;
+        top: 48px;
+        left: 520px;
+      }
+    }
+
+    .Disciplines {
+      text-align: justify;
+      width: 30%;
+      font-family: $font-header;
+      font-size: 30px;
+      line-height: 1.9;
+      color: $main-color-10;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: flex-end;
+    }
   }
 }

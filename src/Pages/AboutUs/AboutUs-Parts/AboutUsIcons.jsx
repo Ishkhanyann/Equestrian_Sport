@@ -11,9 +11,11 @@ export default function AboutUsIcons() {
   return (
     <div className="AboutUs-Icons">
       {icons.map((e, index) => {
-        return <span key={index}>
-          <img className={`AboutUsDesign${index}`} src={e} alt="" />
-        </span>;
+        return (
+          <span key={index}>
+            <img className="AboutUsDesign" src={e} alt="" />
+          </span>
+        );
       })}
     </div>
   );
