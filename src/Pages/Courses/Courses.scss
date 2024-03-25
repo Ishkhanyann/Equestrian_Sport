@@ -117,4 +117,27 @@ body {
       align-items: flex-end;
     }
   }
+
+  .CoursesTrainers{
+    margin-top: 150px;
+    width: 100%;
+    height: 800px;
+    border: 2px solid black;
+    position: relative;
+
+    .trainers{
+      position: absolute;
+      top: 66%;
+      left: 50%;
+      width: 40%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      gap: 50px;
+
+      img{
+        width: 170px;
+      }
+    }
+  }
 }
