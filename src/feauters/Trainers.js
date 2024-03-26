@@ -6,6 +6,7 @@ const initialStateTrainers = [
     name: "Emily Hernandez",
     specialization: "Dressage",
     experience: 8,
+    about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, a molestias? Recusandae exercitationem sed fugiat, ex, mollitia dolorem dolores, totam maiores accusantium ab temporibus aliquid vel ea explicabo debitis atque.`,
     img: "../../../public/E/C-trainer1.png",
     image: "../../../public/E/C-trainer1(2).jpg",
   },
@@ -14,6 +15,7 @@ const initialStateTrainers = [
     name: "Daniel Clark",
     specialization: "Show Jumping",
     experience: 17,
+    about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, a molestias? Recusandae exercitationem sed fugiat, ex, mollitia dolorem dolores, totam maiores accusantium ab temporibus aliquid vel ea explicabo debitis atque.`,
     img: "../../../public/E/C-trainer2.png",
     image: "../../../public/E/C-trainer2(2).jpg",
   },
@@ -22,6 +24,7 @@ const initialStateTrainers = [
     name: "Steven Hill",
     specialization: "Race",
     experience: 13,
+    about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, a molestias? Recusandae exercitationem sed fugiat, ex, mollitia dolorem dolores, totam maiores accusantium ab temporibus aliquid vel ea explicabo debitis atque.`,
     img: "../../../public/E/C-trainer3.png",
     image: "../../../public/E/C-trainer3(2).jpg",
   },
@@ -30,21 +33,23 @@ const initialStateTrainers = [
     name: "Isabella Campbell",
     specialization: "Show Jumping",
     experience: 10,
+    about: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, a molestias? Recusandae exercitationem sed fugiat, ex, mollitia dolorem dolores, totam maiores accusantium ab temporibus aliquid vel ea explicabo debitis atque.`,
     img: "../../../public/E/C-trainer4.png",
     image: "../../../public/E/C-trainer4(2).jpg",
   },
-]
+];
 
 const trainersSlice = createSlice({
   name: "trainers",
   initialState: initialStateTrainers,
   reducers: {
-    changeTrainer: (state, action) => {
-      const trainer = state.filter((e) => e.id == action.payload);
-      return trainer;
-    },
+    // changeTrainer: (state, action) => {
+    //   const trainer = state.filter((e) => e.id == action.payload);
+    //   const newState = [...state]
+    //   return trainer;
+    // },
   },
 });
 
 export default trainersSlice.reducer;
-export const { changeTrainer } = trainersSlice.actions;
+// export const { changeTrainer } = trainersSlice.actions;

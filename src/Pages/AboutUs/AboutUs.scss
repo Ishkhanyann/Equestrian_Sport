@@ -159,24 +159,33 @@
 
   .AboutUs-Competitions {
     margin-top: 90px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    border: 2px solid black;
 
     .competitionsContainer{
-      width: 820px;
+      width: 50%;
+      height: 700px;
       display: flex;
 
       .aboutCompetitions{
-        width: 410px;
+        font-size: 22px;
+        line-height: 1.6;
       }
 
-      .competitionImg{
-        width: 410px;
+      .competitionImg1{
+        position: relative;
+        
         img{
-          width: 410px;
+          position: absolute;
+          top: 5%;
+          left: 10%;
+          width: 600px;
+          background-color: #a87272;
         }
       }
     }

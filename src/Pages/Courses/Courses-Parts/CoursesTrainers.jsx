@@ -1,20 +1,41 @@
 import React, { useState } from "react";
 import "../Courses.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { changeTrainer } from "../../../feauters/Trainers";
+// import { changeTrainer } from "../../../feauters/Trainers";
 
 export default function CoursesTrainers() {
-  const trainers = useSelector((state) => state.trainers)
-  console.log(trainers);
-  const dispatch = useDispatch()
+  const trainers = useSelector((state) => state.trainers);
+  const dispatch = useDispatch();
+  const [trainer, setTrainer] = useState(trainers.filter((e) => e.id === 1));
+  const changeTrainer = (id) => {
+    const result = trainers.filter((e) => e.id === id);
+    setTrainer(result);
+  };
   return (
     <div className="CoursesTrainers">
-
+      {trainer.map((e) => {
+        return (
+          <div className="trainer" key={e.id}>
+            <span className="trainer-img" >
+              <img src={e.img} alt="" />;
+            </span>
+            <div className="trainer-about" >
+              <h1>{e.name}</h1>
+              <h3>Specislization: {e.specialization}</h3>
+              <h3>Experience: {e.experience}</h3>
+              <p>About: {e.about}</p>
+            </div>
+          </div>
+        );
+      })}
       <div className="trainers">
         {trainers.map((e) => {
           return (
             <span key={e.id}>
-              <img src={e.image} onClick={()=>dispatch(changeTrainer(e.id))}/>
+              <img
+                src={e.image}
+                onClick={() => dispatch(changeTrainer(e.id))}
+              />
             </span>
           );
         })}

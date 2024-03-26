@@ -118,25 +118,51 @@ body {
     }
   }
 
-  .CoursesTrainers{
+  .CoursesTrainers {
     margin-top: 150px;
     width: 100%;
     height: 800px;
-    border: 2px solid black;
     position: relative;
 
-    .trainers{
+    .trainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+
+      .trainer-img {
+        padding-left: 20px;
+        height: 800px;
+        width: 45%;
+        background-color: $main-color-3;
+
+        img {
+          height: 800px;
+        }
+      }
+
+      .trainer-about {
+        padding: 100px;
+        width: 55%;
+        font-size: 26px;
+        line-height: 1.6;
+        color: $main-color-9;
+        font-family: $font-title;
+      }
+    }
+
+    .trainers {
       position: absolute;
       top: 66%;
-      left: 50%;
+      left: 40%;
       width: 40%;
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
       gap: 50px;
 
-      img{
-        width: 170px;
+      img {
+        width: 190px;
       }
     }
   }
