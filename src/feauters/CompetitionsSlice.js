@@ -3,21 +3,21 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialStateCompetitions = [
   {
     id: 1,
-    name: 'Longines Global Champions Tour',
     date: '21-23 March 2024',
-    place: 'Tokyo',
-    discipline: 'Show Jumping',
-    rank: 'CSI*5',
-    img: '../../../public/E/img4.png'
+    place: 'Hong Kong',
+    img: '../../../public/E/img4.png',
+    logo: '../../../public/Icons/LM.png',
+    desc: 'Longines Masters of',
+    arena: 'Asiaworld-expo'
   },
   {
     id: 2,
-    name: 'World Cup',
     date: '2 April 2024',
     place: 'Paris',
-    discipline: 'Dressage',
-    rank: 'Grand Prix',
-    img: '../../../public/E/img1.png'
+    img: '../../../public/E/img1.png',
+    logo: '../../../public/Icons/LM.png',
+    desc: 'Longines Masters of',
+    arena: 'Paris Nord Villepinte'
   },
 ]
 
