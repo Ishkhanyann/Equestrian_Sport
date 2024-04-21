@@ -3,6 +3,7 @@ import "./Courses.scss"
 import CoursesMain from './Courses-Parts/CoursesMain'
 import CoursesDisciplines from './Courses-Parts/CoursesDisciplines'
 import CoursesTrainers from './Courses-Parts/CoursesTrainers'
+import CoursesTimeTable from './Courses-Parts/CoursesTimeTable'
 
 export default function Courses() {
   return (
@@ -10,6 +11,7 @@ export default function Courses() {
       <CoursesMain/>
       <CoursesDisciplines/>
       <CoursesTrainers/>
+      <CoursesTimeTable/>
     </div>
   )
 }

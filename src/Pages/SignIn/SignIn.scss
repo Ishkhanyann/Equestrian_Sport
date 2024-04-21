@@ -1,0 +1,91 @@
+@import "../variables";
+
+.SignIn {
+  width: 100%;
+  padding-top: 120px;
+  height: 700px;
+  margin: 0 auto;
+
+  .SignIn-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    width: 80%;
+    height: 600px;
+    outline: 2px solid #adadad;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+    background-color: $main-color-6;
+
+    .form {
+      padding: 50px;
+      width: 40%;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+      input {
+        padding: 10px;
+        border: none;
+        background-color: $main-color-6;
+        width: 400px;
+        height: 30px;
+        border-bottom: 2px solid gray;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      label {
+        margin-top: 15px;
+      }
+
+      .btn {
+        margin-top: 50px;
+        font-size: 20px;
+        border: 2px solid gray;
+        text-align: center;
+        padding: 0;
+        border-radius: 10px;
+        height: 50px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+
+    .mask {
+      width: 70%;
+      height: auto;
+      border-radius: 18px;
+
+      .mask-img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        mask-image: url(../../../public/E/l.png);
+        mask-repeat: no-repeat;
+        object-position: 10% 70%;
+        mask-size: 1500px; 
+        mask-position: 60% 45%;
+      }
+
+      .mask-img-bg{
+        position: relative;
+        width: 100%;
+        height: 610px;
+        object-fit: cover;
+        bottom: 116%;
+        border-radius: 0% 0% 50% 0%;
+      }
+    }
+  }
+}

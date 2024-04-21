@@ -16,10 +16,10 @@ export default function CoursesTrainers() {
       {trainer.map((e) => {
         return (
           <div className="trainer" key={e.id}>
-            <span className="trainer-img" >
-              <img src={e.img} alt="" />;
+            <span className="trainer-img">
+              <img src={e.img} alt="" />
             </span>
-            <div className="trainer-about" >
+            <div className="trainer-about">
               <h1>{e.name}</h1>
               <h3>Specislization: {e.specialization}</h3>
               <h3>Experience: {e.experience}</h3>

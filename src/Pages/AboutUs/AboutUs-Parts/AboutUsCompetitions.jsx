@@ -27,7 +27,7 @@ export default function AboutUsCompetitions() {
                 </span>
               </div>
             <div className="teq1"></div>
-            <div className="teq2"></div>
+            {/* <div className="teq2"></div> */}
             </div>
             <div className="competitionImg">
               <span>
