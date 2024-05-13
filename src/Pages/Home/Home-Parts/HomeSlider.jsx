@@ -4,8 +4,7 @@ import Slider from 'react-slick';
 import '../Home.scss'
 
 export default function HomeSlide() {
-  const sliderData = useSelector(state => state.slider);
-  console.log(sliderData);
+  const sliderData = useSelector(state => state.slider)
   const settings = {
     dots: false,
     arrows: false, 
@@ -15,6 +14,7 @@ export default function HomeSlide() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    cssEase: "linear",
   };
   return (
     <div className='HomeSlide'>

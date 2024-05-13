@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../AboutUs.scss";
 
 export default function AboutUsIcons() {
   const [icons] = useState([

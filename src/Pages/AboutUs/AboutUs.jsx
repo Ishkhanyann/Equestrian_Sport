@@ -4,12 +4,14 @@ import AboutUsHeader from './AboutUs-Parts/AboutUsHeader'
 import AboutUsAbout from './AboutUs-Parts/AboutUsAbout';
 import AboutUsIcons from './AboutUs-Parts/AboutUsIcons';
 import AboutUsCompetitions from './AboutUs-Parts/AboutUsCompetitions';
+import AboutUsStables from './AboutUs-Parts/AboutUsStables';
 
 export default function AboutUs() {
   return (
     <div className='AboutUs'>
       <AboutUsHeader/>
       <AboutUsAbout/>
+      <AboutUsStables/>
       <AboutUsIcons/>
       <AboutUsCompetitions/>
     </div>

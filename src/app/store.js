@@ -3,12 +3,14 @@ import sliderReducer from '../feauters/sliderSlice'
 import competitionsReducer from './../feauters/CompetitionsSlice';
 import trainersReducer from './../feauters/Trainers';
 import timeTableReducer from './../feauters/TimeTable.slice';
+import productsReducer from '../feauters/productsSlice';
 
 export default configureStore({
   reducer: {
     slider: sliderReducer,
     competitions: competitionsReducer,
     trainers: trainersReducer,
-    timeTable: timeTableReducer
+    timeTable: timeTableReducer,
+    products: productsReducer
   }
 })

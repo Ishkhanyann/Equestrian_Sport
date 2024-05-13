@@ -78,7 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 90px;
+    margin-top: 70px;
     position: relative;
 
     .AboutUs-img {
@@ -143,8 +143,38 @@
     }
   }
 
+  .AboutUs-Stables {
+    width:95%;
+    margin-top: 170px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 40px;
+
+    .stable {
+      border: solid cadetblue;
+      padding: 10px;
+      width: calc(25% - 50px); 
+      margin-bottom: 40px; 
+      height: 150px;
+  
+      img{
+        position:absolute;
+        margin-top:-35px;
+        margin-left:25px;
+        color:white;
+        background:cadetblue;
+        width: 50px;
+      }
+
+      p{
+        padding-top: 30px;
+      }
+    }
+  }
+
   .AboutUs-Icons {
-    margin-top: 110px;
+    margin-top: 60px;
     width: 100%;
     height: auto;
     display: flex;
@@ -156,7 +186,7 @@
       width: 250px;
     }
   }
-
+  
   .AboutUs-Competitions {
     margin-top: 100px;
     display: flex;
