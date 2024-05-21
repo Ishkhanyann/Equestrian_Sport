@@ -8,16 +8,23 @@ import "./Shop.scss";
 
 export default function Shop() {
   const [isOpen, setIsOpen] = useState(false);
+  const [openDesc, setOpenDesc] = useState(false);
+  const [openDet, setOpenDet] = useState(false);
   const products = useSelector((state) => state.products);
   const i = useSelector((state) => state.products.item);
   const dispatch = useDispatch();
 
+  const handleOpenDesc = () => {
+    setOpenDesc(!openDesc);
+  };
+
+  const handleOpenDet = () => {
+    setOpenDet(!openDet);
+  };
+
   useEffect(() => {
     dispatch(fetchProducts("http://localhost:3000/media"));
   }, []);
-
-  console.log('data',products);
-  console.log('i',i);
 
   const toogleModal = (id) => {
     setIsOpen(!isOpen);
@@ -39,12 +46,15 @@ export default function Shop() {
         <div className="Shop-Items">
           {products.data.map((e) => {
             return (
-              <div className="Item" key={e.id}>
-                <img onClick={() => toogleModal(e.id)} src={e.img1} />
+              <div
+                onClick={() => toogleModal(e.id)}
+                className="Item"
+                key={e.id}
+              >
+                <img src={e.img1} />
                 <span>
                   <p>{e.name}</p>
                   <p>{e.price}</p>
-                  <button>Add to Cart</button>
                 </span>
               </div>
             );
@@ -60,10 +70,57 @@ export default function Shop() {
                   <img src={e.img1} />
                 </div>
                 <div className="Modal-cont">
-                  <h1>Name: {e.name}</h1>
-                  <h3>Price: {e.price}</h3>
-                  <h4>Desc: {e.desc}</h4>
+                  <h1>{e.name}</h1>
+                  <h3>{e.price}</h3>
                   <button className="btnn">Add to Cart</button>
+                  <div className="icons">
+                    <span>
+                      <img src="../../../public\Icons\delivery-truck.png" alt="" />
+                      <p>Express delivery within 1-3 days</p>
+                    </span>
+                    <span>
+                      <img src="../../../public\Icons\box.png" alt="" />
+                      <p>Shipping within 1 business day</p>
+                    </span>
+                    <span>
+                      <img src="../../../public\Icons\arrow.png" alt="" />
+                      <p>30 days right of withdrawal</p>
+                    </span>
+                    <div className="desc">
+                      <button onClick={handleOpenDesc} type="button">
+                        <h3>Description</h3>
+                      </button>
+                      {openDesc ? <div className="desc">{e.desc}</div> : null}
+                      <button onClick={handleOpenDet} type="button">
+                        <h3>Product details and fabric care</h3>
+                      </button>
+                      {openDet ? (
+                        <div className="det">
+                          <p>
+                            <h3>Size: </h3> {e.detail?.size}
+                          </p>
+                          <p>
+                            <h3>Color:</h3> {e.details?.color}
+                          </p>
+                          <p>
+                            <h3>Details:</h3> {e.details?.detail}
+                          </p>
+                          <p>
+                            <h3>Piping:</h3> {e.details?.piping}
+                          </p>
+                          <p>
+                            <h3>Edge border:</h3> {e.details?.edgeborder}
+                          </p>
+                          <p>
+                            <h3>Material:</h3> {e.details?.material}
+                          </p>
+                          <p>
+                            <h3>Washing:</h3> {e.details?.washing}
+                          </p>
+                        </div>
+                      ) : null}
+                    </div>
+                  </div>
                 </div>
               </div>
             );
@@ -72,7 +129,9 @@ export default function Shop() {
             &#10006;
           </button>
         </Modal>
-      ) : ("")}
+      ) : (
+        ""
+      )}
     </div>
   );
 }

@@ -13,7 +13,7 @@
         "color": "White/black",
         "detail": "Black top binding with white Equestrian Stockholm logo / Modern maze quilting",
         "piping": "Piping in shiney black",
-        "edge-border": "Black",
+        "edgeborder": "Black",
         "badge": "Metal in silver",
         "material": "Inner Material: Lining Bamboo (24% Bamboo + 76% Polyester) / Outer Material: 100% Polyester",
         "washing": "Wash at 30°. Flip inside out for maximum efficiency and minimal wear on the metal badge. Close all velcro fasteners. Do not tumble dry. Do not use fabric softener or bleach. Dry hanging. Do not iron."
@@ -32,10 +32,105 @@
         "color": "White/black",
         "detail": "Black top binding with white Equestrian Stockholm logo / Modern maze quilting",
         "piping": "Piping in shiney black",
-        "edge-border": "Black",
+        "edgeborder": "Black",
         "badge": "Metal in silver",
         "material": "Inner Material: Lining Bamboo (24% Bamboo + 76% Polyester) / Outer Material: 100% Polyester",
         "washing": "Wash at 30°. Flip inside out for maximum efficiency and minimal wear on the metal badge. Close all velcro fasteners. Do not tumble dry. Do not use fabric softener or bleach. Dry hanging. Do not iron."
+      }
+    },
+    {
+      "id": 3,
+      "cat": "Saddle Pads",
+      "name": "Jump Saddle Pad Endless Glow Full",
+      "price": "$77.00 USD",
+      "desc": "An elegant saddle pad in brown with a touch of red and with black details. Decorated with the Equestrian Stockholm badge in purple brown. The material is treated with High IQ cool comfort which gives the saddle pad quick dry and moisture wicking abilities. This helps your horse stay dry and fresh longer.",
+      "img1": "https://equestrianstockholm.com/cdn/shop/files/Endless-glow-jumping-saddle-pad-hoppschabrak-springschabrack-spring-zadeldekje-600x800-pony_138e2a7c-0d45-4f96-9135-4ab9a134d908.jpg?v=1712299207&width=540",
+      "img2": "https://equestrianstockholm.com/cdn/shop/files/endless-glow-jumping-saddle-pad-hoppschabrak-springschabrack-spring-zadeldekje-hov-1.jpg?v=1712299207&width=540",
+      "details": {
+        "size": "Full",
+        "color": "Brown with a touch of red",
+        "detail": "",
+        "piping": "Black with hints of rose gold metallic thread",
+        "edgeborder": "Black",
+        "badge": "Metal in purple brown",
+        "material": "Inner Material: High IQ cool comfort (100% Polyester)/ Outer Material: 100% Polyester",
+        "washing": "Wash at 30°. Flip inside out for maximum efficiency and minimal wear on the metal badge. Close all velcro fasteners. Do not tumble dry. Do not use fabric softener or bleach. Dry hanging. Do not iron."
+      }
+    },
+    {
+      "id": 4,
+      "cat": "Saddle Pads",
+      "name": "Dressage Saddle Pad Endless Glow Full",
+      "price": "$77.00 USD",
+      "desc": "An elegant saddle pad in brown with a touch of red and with black details. Decorated with the Equestrian Stockholm badge in purple brown. The material is treated with High IQ cool comfort which gives the saddle pad quick dry and moisture wicking abilities. This helps your horse stay dry and fresh longer.Style with other pieces from the Endless Glow collection for a head-to-toe stylish look.",
+      "img1": "https://equestrianstockholm.com/cdn/shop/files/Endless-glow-dressage-saddle-pad-dressyrschabrak-dressurschabracke-dressuur-zadeldekje-600x800-full.jpg?v=1711634387&width=540",
+      "img2": "https://equestrianstockholm.com/cdn/shop/files/endless-glow-dressage-saddle-pad-dressyrschabrak-dressurschabracke-dressuur-zadeldekje-on1.jpg?v=1711634392&width=540",
+      "details": {
+        "size": "Full",
+        "color": " Brown with a touch of red",
+        "detail": "",
+        "piping": "Black with hints of rose gold metallic thread",
+        "edgeborder": "Black",
+        "badge": "Metal in purple brown",
+        "material": " Inner Material: High IQ cool comfort (100% Polyester)/ Outer Material: 100% Polyester",
+        "washing": "Wash at 30°. Flip inside out for maximum efficiency and minimal wear on the metal badge. Close all velcro fasteners. Do not tumble dry. Do not use fabric softener or bleach. Dry hanging. Do not iron."
+      }
+    },
+    {
+      "id": 5,
+      "cat": "Saddle Pads",
+      "name": "Dressage Saddle Pad Golden Brown Full",
+      "price": "$77.00 USD",
+      "desc": "The Golden Brown saddle pad is a favorite in the saddle pad department! Our luxury saddle pad in shiny dark brown is perfect for a day of training or competition. The inner material has ‘super quick dry’ function and will keep your horses dry during your work out. The saddle pad has shiny and dirt resistant with beautiful details in gold and patterns with the Equestrian Stockholm logo.",
+      "img1": "https://equestrianstockholm.com/cdn/shop/files/golden-brown-dressage-new-quilting-webb.jpg?v=1711634417&width=540",
+      "img2": "https://equestrianstockholm.com/cdn/shop/files/dressage_saddle_full_2.jpg?v=1711634416&width=540",
+      "details": {
+        "size": "Full",
+        "color": "Golden Brown",
+        "detail": "",
+        "piping": "Brown/Gold",
+        "edgeborder": "",
+        "badge": "Gold",
+        "material": "Super quick Dry/Shiny dirt repellent",
+        "washing": "Wash at 30 degrees. Don’t use softner"
+      }
+    },
+    {
+      "id": 6,
+      "cat": "Saddle Pads",
+      "name": "Jump Saddle Pad Golden Brown Full",
+      "price": "$77.00 USD",
+      "desc": "The Golden Brown saddle pad is a favorite in the saddle pad department! Our luxury saddle pad in shiny dark brown is perfect for a day of training or competition. The inner material has ‘super quick dry’ function and will keep your horses dry during your work out. The saddle pad has shiny and dirt resistant with beautiful details in gold and patterns with the Equestrian Stockholm logo.",
+      "img1": "https://equestrianstockholm.com/cdn/shop/files/golden-brown-jump-new-quilting-webb.jpg?v=1711633896&width=540",
+      "img2": "https://equestrianstockholm.com/cdn/shop/files/hovgoldenbrown.jpg?v=1711633897&width=540",
+      "details": {
+        "size": "Full",
+        "color": "Golden Brown",
+        "detail": "",
+        "piping": "Brown/Gold",
+        "edgeborder": "",
+        "badge": "Gold",
+        "material": "Super quick Dry/Shiny dirt repellent",
+        "washing": "Wash at 30 degrees. Don’t use softner"
+      }
+    },
+    {
+      "id": 7,
+      "cat": "Ear Bonnet",
+      "name": "Padded Ear Bonnet Clean Black",
+      "price": "$66.00 USD",
+      "desc": "Luxurious padded ear bonnet in a stylish black colour with white embroidery on the left ear. Designed with padded ears to reduce noise. The bonnet provides both insect protection and noise reduction. It has elastic cloth on the ears for extra comfort. Matches perfectly with the Modern White Black saddle pad.",
+      "img1": "https://equestrianstockholm.com/cdn/shop/files/black-ear-net-huva-fliegenhaube-oornetje-600x800.jpg?v=1713979070&width=540",
+      "img2": "https://equestrianstockholm.com/cdn/shop/files/black-ear-bonnet-huva-fliegenhaube-oornetje-1.jpg?v=1713979070&width=540",
+      "details": {
+        "size": "",
+        "color": "Black",
+        "detail": "",
+        "piping": "",
+        "edgeborder": "",
+        "badge": "",
+        "material": "Crocheted fabric, 100% Cotton. Shiny fabric, 100% Polyester",
+        "washing": "Wash at 30°. Use a washing bag. Do not use fabric softener or bleach. Do not tumble dry. Dry Flat. Do not iron."
       }
     }
   ]
