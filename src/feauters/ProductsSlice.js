@@ -1,41 +1,52 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialProductsValue = {
   data: [],
-  status: 'idle',
+  item: [],
+  status: "idle",
   isPending: false,
-}
+};
 
-export const getAsyncProducts = createAsyncThunk(
-  'product/getAsyncProducts',
+export const fetchProducts = createAsyncThunk(
+  "product/fetchProducts",
   async () => {
-    const products = await fetch('https://jsonplaceholder.typicode.com/photos')
-    const data = await products.json();
-    return data;
+    const products = await fetch("http://localhost:3000/media")
+    const data = await products.json()
+    return data
   }
 )
 
 const productsSlice = createSlice({
-  name: 'products',
-  initialState: initialProductsValue, 
-  reducers: {},
+  name: "products",
+  initialState: initialProductsValue,
+  reducers: {
+    showItem: (state, action) => {
+      const itemId = action.payload.id;
+      const item = state.data.find((e) => e.id === itemId);
+      return {
+        ...state,
+        item: item ? [item] : [],
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(getAsyncProducts.pending, (state, action) => {
-        state.isPending = true,
-        state.status = 'pending'
+      .addCase(fetchProducts.pending, (state, action) => {
+        (state.isPending = true), (state.status = "pending");
       })
-      .addCase(getAsyncProducts.fulfilled, (state, action) => {
-        state.isPending = false, 
-        state.status = 'fulfilled',
-        state.data = action.payload 
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        (state.isPending = false),
+          (state.status = "fulfilled"),
+          (state.data = action.payload);
       })
-      .addCase(getAsyncProducts.rejected, (state, action) => {
-        state.isPending = false, 
-        state.status = 'rejected',
-        state.data = []
-      })
-  }
-})
+      .addCase(fetchProducts.rejected, (state, action) => {
+        (state.isPending = false),
+          (state.status = "rejected"),
+          (state.data = []);
+      });
+  },
+});
 
-export default productsSlice.reducer
+export default productsSlice.reducer;
+export const { showItem } = productsSlice.actions;

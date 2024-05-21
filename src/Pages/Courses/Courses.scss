@@ -26,6 +26,7 @@ body {
       font-size: 22px;
 
       h1 {
+        font-family: $font-header;
         padding-bottom: 20px;
       }
     }
@@ -73,7 +74,7 @@ body {
     .Images {
       width: 670px;
       height: 450px;
-      border: 4px solid $main-color-10;
+      border: 4px solid $main-color-9;
       position: relative;
 
       .jumping {
@@ -108,7 +109,6 @@ body {
     .Disciplines {
       text-align: justify;
       width: 30%;
-      font-family: $font-header;
       font-size: 30px;
       line-height: 1.9;
       color: $main-color-10;
@@ -116,6 +116,7 @@ body {
       flex-direction: column;
       justify-content: stretch;
       align-items: flex-end;
+      font-family: $font-header;
     }
   }
 

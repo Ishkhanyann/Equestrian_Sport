@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import "../Courses.scss";
 import { useDispatch, useSelector } from "react-redux";
-// import { changeTrainer } from "../../../feauters/Trainers";
+import { changeTrainer } from "../../../feauters/Trainers";
 
 export default function CoursesTrainers() {
-  const trainers = useSelector((state) => state.trainers);
+  const trainers = useSelector((state) => state.trainers.trainers);
   const dispatch = useDispatch();
-  const [trainer, setTrainer] = useState(trainers.filter((e) => e.id === 1));
-  const changeTrainer = (id) => {
-    const result = trainers.filter((e) => e.id === id);
-    setTrainer(result);
-  };
+  const trainer = useSelector(state => state.trainers.trainer)
+
   return (
     <div className="CoursesTrainers">
       {trainer.map((e) => {

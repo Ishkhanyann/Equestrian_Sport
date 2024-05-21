@@ -1,0 +1,42 @@
+{
+  "media" : [
+    {
+      "id": 1,
+      "cat": "Saddle Pads",
+      "name": "Dressage Saddle Pad Modern White Black Edition Full",
+      "price": "$89.00 USD",
+      "desc": "Elegant saddle pad with modern maze quilting in a white color with black and silver details. Decorated with the Equestrian Stockholm badge in silver. The bamboo material is perfect all year round due to its thermal regulating effect - cooling in the summer and warming in the winter. It is also quick dry, moisture wicking, and anti-bacterial. Style with other pieces from the Black Edition collection for a head-to-toe stylish look.",
+      "img1": "https://equestrianstockholm.com/cdn/shop/files/black-edition-modern-white-dressage-saddle-pad-dressyrschabrak-dressurschabracke-full-600x800-1.jpg?v=1711634290",
+      "img2": "https://equestrianstockholm.com/cdn/shop/files/black-1-1-1.jpg?v=1711634290",
+      "details": {
+        "size": "Full",
+        "color": "White/black",
+        "detail": "Black top binding with white Equestrian Stockholm logo / Modern maze quilting",
+        "piping": "Piping in shiney black",
+        "edge-border": "Black",
+        "badge": "Metal in silver",
+        "material": "Inner Material: Lining Bamboo (24% Bamboo + 76% Polyester) / Outer Material: 100% Polyester",
+        "washing": "Wash at 30°. Flip inside out for maximum efficiency and minimal wear on the metal badge. Close all velcro fasteners. Do not tumble dry. Do not use fabric softener or bleach. Dry hanging. Do not iron."
+      }
+    },
+    {
+      "id": 2,
+      "cat": "Saddle Pads",
+      "name": "Jump Saddle Pad Modern White Black Edition Full",
+      "price": "$99.00 USD",
+      "desc": "Elegant saddle pad with modern maze quilting in a white color with black and silver details. Decorated with the Equestrian Stockholm badge in silver. The bamboo material is perfect all year round due to its thermal regulating effect - cooling in the summer and warming in the winter. It is also quick dry, moisture wicking, and anti-bacterial. Style with other pieces from the Black Edition collection for a head-to-toe stylish look.",
+      "img1": "https://equestrianstockholm.com/cdn/shop/files/bl516f1.jpg?v=1711634279&width=540",
+      "img2": "https://equestrianstockholm.com/cdn/shop/files/black-white-jumping-saddle-pad-hoppschabrak-springschabrack-full-hov.jpg?v=1711634280&width=540",
+      "details": {
+        "size": "Full",
+        "color": "White/black",
+        "detail": "Black top binding with white Equestrian Stockholm logo / Modern maze quilting",
+        "piping": "Piping in shiney black",
+        "edge-border": "Black",
+        "badge": "Metal in silver",
+        "material": "Inner Material: Lining Bamboo (24% Bamboo + 76% Polyester) / Outer Material: 100% Polyester",
+        "washing": "Wash at 30°. Flip inside out for maximum efficiency and minimal wear on the metal badge. Close all velcro fasteners. Do not tumble dry. Do not use fabric softener or bleach. Dry hanging. Do not iron."
+      }
+    }
+  ]
+}

@@ -5,6 +5,7 @@ import AboutUsAbout from './AboutUs-Parts/AboutUsAbout';
 import AboutUsIcons from './AboutUs-Parts/AboutUsIcons';
 import AboutUsCompetitions from './AboutUs-Parts/AboutUsCompetitions';
 import AboutUsStables from './AboutUs-Parts/AboutUsStables';
+import AboutUsHorses from './AboutUs-Parts/AboutUsHorses';
 
 export default function AboutUs() {
   return (
@@ -12,6 +13,7 @@ export default function AboutUs() {
       <AboutUsHeader/>
       <AboutUsAbout/>
       <AboutUsStables/>
+      <AboutUsHorses/>
       <AboutUsIcons/>
       <AboutUsCompetitions/>
     </div>

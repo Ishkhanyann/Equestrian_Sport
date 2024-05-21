@@ -114,16 +114,6 @@
           display: inline-block;
           color: $main-color-9;
         }
-        button {
-          width: 180px;
-          height: 70px;
-          border-radius: 20px;
-          font-size: 22px;
-          font-weight: 600;
-          font-family: $font-title;
-          background-color: $main-color-6;
-          border: 2px solid $main-color-2;
-        }
       }
       .AboutUs-numbers {
         bottom: -5%;
@@ -169,6 +159,49 @@
 
       p{
         padding-top: 30px;
+      }
+    }
+  }
+
+  .About-Horses {
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .About-Container {
+      width: 1500px;
+      height: 650px;
+      display: grid;
+      grid-template-columns: repeat(30, 50px);
+      grid-template-rows: repeat(13, 50px);
+
+      .About-Horse1 {
+        grid-area: 4/1/10/7;
+        width: 300px;
+      }
+
+      .About-Horse2 {
+        grid-area: 1/10/7/16;
+        width: 300px;
+      }
+      .About-Horse3 {
+        grid-area: 8/8/13/13;
+        width: 300px;
+      }
+      .About-Horse4 {
+        grid-area: 2/18/10/23;
+        width: 300px;
+      }
+      .About-Horse5 {
+        grid-area: 8/16/13/21;
+        width: 300px;
+      }
+      .About-Horse6 {
+        grid-area: 4/25/10/31;
+        width: 300px;
       }
     }
   }

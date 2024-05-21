@@ -16,20 +16,19 @@ export default function HomeHistory() {
           alt=""
         />
       </div>
-      <div className="Home-Text">
-        <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-          necessitatibus dolore commodi eligendi aut cumque voluptate enim
-          dolorem. Ducimus dolorum pariatur sit nulla odit neque, dignissimos
-          similique quas? Natus, beatae! Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Amet necessitatibus dolore commodi eligendi aut
-          cumque voluptate enim dolorem. Ducimus dolorum pariatur sit nulla odit
-          neque, dignissimos similique quas? Natus, beatae! Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Amet necessitatibus dolore
-          commodi eligendi aut cumque voluptate enim dolorem. Ducimus dolorum
-          pariatur sit nulla odit neque, dignissimos similique quas? Natus,
-          beatae!
-        </span>
+      <div className="Home-Text-Container">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <div className="Home-Text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Minima temporibus quam, molestiae autem eaque fuga, 
+          laboriosam libero incidunt, maiores quaerat ullam 
+          eius corporis qui dicta sapiente reprehenderit ipsa 
+          cum labore? A necessitatibus ea iusto consectetur 
+          repellendus obcaecati deserunt. Facere aliquid 
+          error temporibus ut assumenda quos dolorem veritatis 
+          fuga omnis inventore. 
+        </div>
+        <button>Read More</button>
       </div>
     </div>
   );

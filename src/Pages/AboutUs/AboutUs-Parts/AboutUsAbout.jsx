@@ -21,7 +21,6 @@ export default function AboutUsAbout() {
             corrupti ut aliquam quae, optio praesentium suscipit libero nostrum
             eum. Odit, distinctio ducimus! Porro eveniet consectetur nemo totam?
           </span>
-          <button>Read More</button>
         </div>
         <div className="AboutUs-numbers">
           <p>10+</p>
