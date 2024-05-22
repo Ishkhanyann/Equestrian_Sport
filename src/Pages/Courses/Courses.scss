@@ -38,7 +38,7 @@ body {
 
       .full {
         position: absolute;
-        width: 700px;
+        width: 675px;
         height: 400px;
         background-color: $main-color-2;
         left: 130px;
@@ -166,6 +166,59 @@ body {
       img {
         width: 190px;
       }
+    }
+  }
+
+  .Courses-slider {
+    margin-top: 90px;
+
+    .slick-slider{
+      position: relative;
+
+      .slick-list {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+
+      .slick-track{
+        display: flex;
+
+        .slick-slide{
+          padding: 30px;
+          position: relative;
+
+          .course-card {
+            background-color: $main-color-3;
+            border: 2px solid $main-color-10;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 200px;
+            height: 300px;
+      
+            h1 {
+              font-size: 24px;
+              color: $main-color-9;
+              margin-bottom: 15px;
+              font-family: $font-header;
+            }
+      
+            p {
+              font-family: $font-title;
+              line-height: 1.4;
+              color: $main-color-9;
+              font-size: 18px;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .slick-slide.slick-active {
+      display: block;
     }
   }
 }

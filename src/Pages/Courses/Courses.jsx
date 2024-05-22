@@ -4,6 +4,7 @@ import CoursesMain from './Courses-Parts/CoursesMain'
 import CoursesDisciplines from './Courses-Parts/CoursesDisciplines'
 import CoursesTrainers from './Courses-Parts/CoursesTrainers'
 import CoursesTimeTable from './Courses-Parts/CoursesTimeTable'
+import CoursesCourses from './Courses-Parts/CoursesCourses'
 
 export default function Courses() {
   return (
@@ -11,6 +12,7 @@ export default function Courses() {
       <CoursesMain/>
       <CoursesDisciplines/>
       <CoursesTrainers/>
+      <CoursesCourses/>
       <CoursesTimeTable/>
     </div>
   )
