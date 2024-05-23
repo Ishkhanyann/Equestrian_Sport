@@ -42,7 +42,11 @@ export default function Shop() {
         </span>
       </div>
       <div className="Shop-Container">
-        <div className="Shop-Cats"></div>
+        <div className="Shop-Cats">
+          <span>
+            <img src={"../../../public/Icons/shopping-cart.png"} alt="" />
+          </span>
+        </div>
         <div className="Shop-Items">
           {products.data.map((e) => {
             return (
@@ -96,27 +100,13 @@ export default function Shop() {
                       </button>
                       {openDet ? (
                         <div className="det">
-                          <p>
-                            <h3>Size: </h3> {e.detail?.size}
-                          </p>
-                          <p>
-                            <h3>Color:</h3> {e.details?.color}
-                          </p>
-                          <p>
-                            <h3>Details:</h3> {e.details?.detail}
-                          </p>
-                          <p>
-                            <h3>Piping:</h3> {e.details?.piping}
-                          </p>
-                          <p>
-                            <h3>Edge border:</h3> {e.details?.edgeborder}
-                          </p>
-                          <p>
-                            <h3>Material:</h3> {e.details?.material}
-                          </p>
-                          <p>
-                            <h3>Washing:</h3> {e.details?.washing}
-                          </p>
+                            {e.detail?.size ? <p> <h3>Size: </h3> {e.detail?.size} </p> : ''}
+                            {e.details?.color ?  <p><h3>Color:</h3> {e.details?.color}</p> : ''}
+                            {e.details?.detail ?  <p><h3>Details:</h3> {e.details?.detail}</p> : ''}
+                            {e.details?.piping ?  <p><h3>Piping:</h3> {e.details?.piping}</p> : ''}
+                            {e.details?.edgeborder ?  <p><h3>Edge border:</h3> {e.details?.edgeborder}</p> : ''}
+                            {e.details?.material ?  <p><h3>Material:</h3> {e.details?.material}</p> : ''}
+                            {e.details?.washing ?  <p><h3>Washing:</h3> {e.details?.washing}</p> : ''}
                         </div>
                       ) : null}
                     </div>

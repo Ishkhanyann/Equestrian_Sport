@@ -13,7 +13,7 @@
 
   .Modal-body {
     width: 80%;
-    background-color: rgb(226, 226, 226);
+    background-color: $main-color-1;
     border-radius: 8px;
     padding: 1em;
     height: auto;
@@ -57,7 +57,7 @@
       height: 40px;
       padding: 10px;
       border: 2px solid $main-color-9;
-      background-color: rgb(226, 226, 226);
+      background-color: $main-color-1;
       color: $main-color-9;
       font-size: 18px;
       font-family: $font-title;
@@ -103,8 +103,8 @@
           width: 600px;
           height: 30px;
           border: none;
-          background-color: rgb(226, 226, 226);
-          border-top: 2px solid #ccc;
+          background-color: $main-color-1;
+          border-top: 2px solid $main-color-9;
           font-size: 16px;
           font-family: $font-title;
         }
