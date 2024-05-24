@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 
 const initialProductsValue = {
   data: [],
@@ -11,7 +10,7 @@ const initialProductsValue = {
 export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
   async () => {
-    const products = await fetch("http://localhost:3000/media")
+    const products = await fetch("http://localhost:3001/media")
     const data = await products.json()
     return data
   }
@@ -28,6 +27,17 @@ const productsSlice = createSlice({
         ...state,
         item: item ? [item] : [],
       };
+    },
+    saddlePads: (state, action) => {
+      const cats = state.data.filter(e => e.cat == "Saddle Pads")
+      return {
+        ...state,
+        data: cats ? cats : []
+      }
+    },
+    addToCart: (state, action) => {
+      const itms = state.data.filter((e) => e.id == action.payload.id)
+      localStorage.setItem(action.payload.id, JSON.stringify(itms))
     },
   },
   extraReducers: (builder) => {
@@ -50,3 +60,5 @@ const productsSlice = createSlice({
 
 export default productsSlice.reducer;
 export const { showItem } = productsSlice.actions;
+export const { saddlePads } = productsSlice.actions;
+export const { addToCart } = productsSlice.actions;

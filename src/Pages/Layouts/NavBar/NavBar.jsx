@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './NavBar.scss'
+import "./NavBar.scss";
 
 export default function NavBar() {
   return (
@@ -22,6 +22,11 @@ export default function NavBar() {
             </li>
             <li>
               <Link to="/SignIn"> SignIn </Link>
+            </li>
+            <li>
+              <Link to="/Cart">
+                <img src={"../../../public/Icons/shopping-cart.png"} alt="" />
+              </Link>
             </li>
           </ul>
         </nav>

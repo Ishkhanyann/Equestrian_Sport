@@ -11,6 +11,7 @@ import Courses from "./Pages/Courses/Courses";
 import Shop from "./Pages/Shop/Shop";
 import SignIn from "./Pages/SignIn/SignIn";
 import Layouts from "./Pages/Layouts/Layouts";
+import Cart from "./Pages/Shop/Cart/Cart";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="Courses" element={<Courses />} />
       <Route path="Shop" element={<Shop />} />
       <Route path="SignIn" element={<SignIn />} />
+      <Route path="Cart" element={<Cart />} />
     </Route>
   )
 );
