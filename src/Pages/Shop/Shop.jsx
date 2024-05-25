@@ -1,11 +1,22 @@
 import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
-import { fetchProducts } from "../../feauters/ProductsSlice";
+import React, { useEffect, useState } from "react";
 import Modal from "./Modal/Modal";
-import { useState } from "react";
-import { showItem } from "../../feauters/ProductsSlice";
-import { saddlePads } from "../../feauters/ProductsSlice";
-import { addToCart } from "../../feauters/ProductsSlice";
+import {
+  fetchProducts,
+  showItem,
+  saddlePads,
+  addToCart,
+  earBonnet,
+  // halters,
+  // horseBlankets,
+  // horseBoots,
+  // legWraps,
+  // tops,
+  // ridingLeggins,
+  // ridingJackets,
+  // ridingShowJackets,
+  // ridingGloves,
+} from "../../feauters/ProductsSlice";
 import "./Shop.scss";
 
 export default function Shop() {
@@ -16,6 +27,8 @@ export default function Shop() {
   const products = useSelector((state) => state.products.data);
   const i = useSelector((state) => state.products.item);
   const dispatch = useDispatch();
+
+  console.log(products);
 
   const handleOpenDesc = () => {
     setOpenDesc(!openDesc);
@@ -30,7 +43,11 @@ export default function Shop() {
   };
 
   const catFilter = () => {
-    dispatch(saddlePads())
+    dispatch(saddlePads());
+  };
+
+  const earBonnetFilter = () =>{
+    dispatch(earBonnet())
   }
 
   useEffect(() => {
@@ -39,12 +56,12 @@ export default function Shop() {
 
   const toogleModal = (id) => {
     setIsOpen(!isOpen);
-    dispatch(showItem({id: id}));
+    dispatch(showItem({ id: id }));
   };
 
   const addCart = (id) => {
-    dispatch(addToCart({id : id}))
-  }
+    dispatch(addToCart({ id: id }));
+  };
 
   return (
     <div className="Shop">
@@ -58,25 +75,39 @@ export default function Shop() {
       </div>
       <div className="Shop-Container">
         <div className="Shop-Cats">
-          <span>
-          </span>
+          <span></span>
           <button onClick={openHorseFilter}>Horses</button>
-          {openHorseFilt ? 
-            <div> 
-              <button onClick={catFilter} >Saddle Pads</button>
-            </div> 
-          : ""}
-          {/* <button></button> */}
+          {openHorseFilt ? (
+            <div>
+              <button onClick={catFilter}>Saddle Pads</button>
+              <button onClick={earBonnetFilter} >Ear Bonnet</button>
+            </div>
+          ) : (
+            ""
+          )}
+          <button>Rider</button>
         </div>
         <div className="Shop-Items">
-          {products.map((e,index) => {
+          {products.map((e, index) => {
             return (
               <div
                 onClick={() => toogleModal(e.id)}
                 className="Item"
                 key={index}
               >
-                <img src={e.img1} onMouseOver={e => e.currentTarget.src = e.target.getAttribute("data-hover-src")} onMouseOut={e => e.currentTarget.src = e.target.getAttribute("data-normal-src")} data-normal-src={e.img1} data-hover-src={e.img2} />
+                <img
+                  src={e.img1}
+                  onMouseOver={(e) =>
+                    (e.currentTarget.src =
+                      e.target.getAttribute("data-hover-src"))
+                  }
+                  onMouseOut={(e) =>
+                    (e.currentTarget.src =
+                      e.target.getAttribute("data-normal-src"))
+                  }
+                  data-normal-src={e.img1}
+                  data-hover-src={e.img2}
+                />
                 <span>
                   <p>{e.name}</p>
                   <p>{e.price}</p>
@@ -91,13 +122,27 @@ export default function Shop() {
           {i.map((e) => {
             return (
               <div className="Modal-container" key={e.id}>
-                <div>
-                <img src={e.img1} onMouseOver={e => e.currentTarget.src = e.target.getAttribute("data-hover-src")} onMouseOut={e => e.currentTarget.src = e.target.getAttribute("data-normal-src")} data-normal-src={e.img1} data-hover-src={e.img2} />
+                <div className="Modal-img">
+                  <img
+                    src={e.img1}
+                    onMouseOver={(e) =>
+                      (e.currentTarget.src =
+                        e.target.getAttribute("data-hover-src"))
+                    }
+                    onMouseOut={(e) =>
+                      (e.currentTarget.src =
+                        e.target.getAttribute("data-normal-src"))
+                    }
+                    data-normal-src={e.img1}
+                    data-hover-src={e.img2}
+                  />
                 </div>
                 <div className="Modal-cont">
                   <h1>{e.name}</h1>
                   <h3>{e.price}</h3>
-                  <button onClick={() => addCart(e.id)} className="btnn">Add to Cart</button>
+                  <button onClick={() => addCart(e.id)} className="btnn">
+                    Add to Cart
+                  </button>
                   <div className="icons">
                     <span>
                       <img

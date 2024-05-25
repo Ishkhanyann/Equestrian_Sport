@@ -42,9 +42,17 @@
     justify-content: flex-start;
     align-items: center;
 
-    img {
+    .Modal-img{
       width: 480px;
+      height: 640px;
+
+      img {
+        width: 480px;
+        height: 640px;
+        object-fit: cover;
+      }
     }
+
 
     .Modal-cont {
       padding: 20px;
