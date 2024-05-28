@@ -8,6 +8,9 @@ export default function NavBar() {
       <header>
         <nav>
           <ul>
+            <span>
+              <img src="public\Icons\Logo-main.png" alt="" />
+            </span>
             <li>
               <Link to="/"> Home </Link>
             </li>

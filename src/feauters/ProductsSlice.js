@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialProductsValue = {
+  originalData: [],
   data: [],
   item: [],
-  cats: [],
   status: "idle",
   isPending: false,
 };
@@ -30,104 +30,132 @@ const productsSlice = createSlice({
       };
     },
     saddlePads: (state, action) => {
-
-      const cats = state.data.filter((e) => e.cat == "Saddle Pads");
+      const cats = state.originalData.filter((e) => e.cat == "Saddle Pads");
       return {
         ...state,
         data: cats ? cats : [],
       };
     },
     earBonnet: (state, action) => {
-      const cats = state.data.filter((e) => e.cat == "Ear Bonnet");
+      const cats = state.originalData.filter((e) => e.cat == "Ear Bonnet");
       return {
         ...state,
         data: cats ? cats : [],
       };
     },
     halters: (state, action) => {
-      const cats = state.data.filter((e) => e.cat == "Halters");
+      const cats = state.originalData.filter((e) => e.cat == "Halters");
       return {
         ...state,
         data: cats ? cats : [],
       };
     },
     horseBlankets: (state, action) => {
-      const cats = state.data.filter((e) => e.cat == "Horse Blankets");
+      const cats = state.originalData.filter((e) => e.cat == "Horse Blankets");
       return {
         ...state,
         data: cats ? cats : [],
       };
     },
     horseBoots: (state, action) => {
-      const cats = state.data.filter((e) => e.cat == "Horse Boots");
+      const cats = state.originalData.filter((e) => e.cat == "Horse Boots");
       return {
         ...state,
         data: cats ? cats : [],
       };
     },
     legWraps: (state, action) => {
-      const cats = state.data.filter((e) => e.cat == "Leg Wraps");
+      const cats = state.originalData.filter((e) => e.cat == "Leg Wraps");
       return {
         ...state,
         data: cats ? cats : [],
       };
     },
     tops: (state, action) => {
-      const cat = state.data.filter((e) => e.cat == "Tops");
+      const cat = state.originalData.filter((e) => e.cat == "Tops");
       return {
         ...state,
         data: cat ? cat : [],
       };
     },
     ridingLeggins: (state, action) => {
-      const cat = state.data.filter((e) => e.cat == "Riding Tights & Leggins");
+      const cat = state.originalData.filter((e) => e.cat == "Riding Tights & Leggins");
       return {
         ...state,
         data: cat ? cat : [],
       };
     },
     ridingJackets: (state, action) => {
-      const cat = state.data.filter((e) => e.cat == "Riding Jackets");
+      const cat = state.originalData.filter((e) => e.cat == "Riding Jackets");
       return {
         ...state,
         data: cat ? cat : [],
       };
     },
     ridingShowJackets: (state, action) => {
-      const cat = state.data.filter((e) => e.cat == "Show Jackets");
+      const cat = state.originalData.filter((e) => e.cat == "Show Jackets");
       return {
         ...state,
         data: cat ? cat : [],
       };
     },
     ridingGloves: (state, action) => {
-      const cat = state.data.filter((e) => e.cat == "Riding Gloves");
+      const cat = state.originalData.filter((e) => e.cat == "Riding Gloves");
       return {
         ...state,
         data: cat ? cat : [],
       };
     },
     addToCart: (state, action) => {
-      const itms = state.data.filter((e) => e.id == action.payload.id);
+      const itms = state.originalData.filter((e) => e.id == action.payload.id);
       localStorage.setItem(action.payload.id, JSON.stringify(itms));
     },
-  },
+    all: (state,action) => {
+      return {
+        ...state,
+        data: state.originalData
+      }
+    },
+    countPlusMinus: (state, action) => {
+      const id = action.payload; 
+      const updatedData = state.originalData.map(e => {
+        if (e.id === id) {
+          switch (action.type) {
+            case "Plus":
+              return { ...e, count: (e.count || 0) + 1 };
+            case "Minus":
+              return { ...e, count: (e.count || 0) - 1 };
+            default:
+              return e;
+          }
+        }
+        return e;
+      });
+      return {
+        ...state,
+        data: updatedData
+      };
+    }, 
+  },   
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state, action) => {
-        (state.isPending = true), (state.status = "pending");
+        state.isPending = true, 
+        state.status = "pending";
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        (state.isPending = false),
-          (state.status = "fulfilled"),
-          (state.data = action.payload);
+        state.isPending = false,
+        state.status = "fulfilled",
+        state.data = action.payload;
+        state.originalData = action.payload;
       })
       .addCase(fetchProducts.rejected, (state, action) => {
-        (state.isPending = false),
-          (state.status = "rejected"),
-          (state.data = []);
+        state.isPending = false,
+        state.status = "rejected",
+        state.data = [];
+        state.originalData = []
       });
-  },
+  }
 });
 
 export default productsSlice.reducer;
@@ -144,3 +172,5 @@ export const { ridingLeggins } = productsSlice.actions;
 export const { ridingJackets } = productsSlice.actions;
 export const { ridingShowJackets } = productsSlice.actions;
 export const { ridingGloves } = productsSlice.actions;
+export const { all } = productsSlice.actions;
+export const { countPlusMinus } = productsSlice.actions;

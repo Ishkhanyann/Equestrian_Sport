@@ -17,6 +17,16 @@
     height: 60px;
   }
 
+  span{
+    position: relative;
+    img{
+      position: absolute;
+      bottom: -40px;
+      right: 680px;
+      width: 200px;
+    };
+  }
+
   ul {
     height: 60px;
     display: flex;

@@ -7,15 +7,17 @@ import {
   saddlePads,
   addToCart,
   earBonnet,
-  // halters,
-  // horseBlankets,
-  // horseBoots,
-  // legWraps,
-  // tops,
-  // ridingLeggins,
-  // ridingJackets,
-  // ridingShowJackets,
-  // ridingGloves,
+  halters,
+  horseBlankets,
+  horseBoots,
+  legWraps,
+  tops,
+  ridingLeggins,
+  ridingJackets,
+  ridingShowJackets,
+  ridingGloves,
+  all,
+  countPlusMinus,
 } from "../../feauters/ProductsSlice";
 import "./Shop.scss";
 
@@ -24,44 +26,74 @@ export default function Shop() {
   const [openDesc, setOpenDesc] = useState(false);
   const [openDet, setOpenDet] = useState(false);
   const [openHorseFilt, setOpenHorseFilt] = useState(false);
+  const [openRiderFilt, setOpenRiderFilt] = useState(false);
   const products = useSelector((state) => state.products.data);
   const i = useSelector((state) => state.products.item);
   const dispatch = useDispatch();
 
-  console.log(products);
-
   const handleOpenDesc = () => {
     setOpenDesc(!openDesc);
   };
-
   const handleOpenDet = () => {
     setOpenDet(!openDet);
   };
-
   const openHorseFilter = () => {
     setOpenHorseFilt(!openHorseFilt);
   };
-
+  const openRiderFilter = () => {
+    setOpenRiderFilt(!openRiderFilt);
+  };
   const catFilter = () => {
     dispatch(saddlePads());
   };
-
-  const earBonnetFilter = () =>{
-    dispatch(earBonnet())
-  }
-
-  useEffect(() => {
-    dispatch(fetchProducts("http://localhost:3001/media"));
-  }, []);
-
+  const earBonnetFilter = () => {
+    dispatch(earBonnet());
+  };
+  const haltersFilter = () => {
+    dispatch(halters());
+  };
+  const horseBlanketsFilter = () => {
+    dispatch(horseBlankets());
+  };
+  const horseBootsFilter = () => {
+    dispatch(horseBoots());
+  };
+  const legWrapsFilter = () => {
+    dispatch(legWraps());
+  };
+  const topsFilter = () => {
+    dispatch(tops());
+  };
+  const ridingLegginsFilter = () => {
+    dispatch(ridingLeggins());
+  };
+  const ridingJacketsFilter = () => {
+    dispatch(ridingJackets());
+  };
+  const ridingShowJacketsFilter = () => {
+    dispatch(ridingShowJackets());
+  };
+  const ridingGlovesFilter = () => {
+    dispatch(ridingGloves());
+  };
+  const allFilter = () => {
+    dispatch(all());
+  };
   const toogleModal = (id) => {
     setIsOpen(!isOpen);
     dispatch(showItem({ id: id }));
   };
-
   const addCart = (id) => {
     dispatch(addToCart({ id: id }));
   };
+  const add = (id) => {
+    dispatch(countPlusMinus({type:'Plus',  payload: id}))
+  }
+  useEffect(() => {
+    dispatch(fetchProducts("http://localhost:3001/media"));
+  }, []);
+
+  console.log(products);
 
   return (
     <div className="Shop">
@@ -76,16 +108,34 @@ export default function Shop() {
       <div className="Shop-Container">
         <div className="Shop-Cats">
           <span></span>
+          <button onClick={allFilter}>All</button>
           <button onClick={openHorseFilter}>Horses</button>
           {openHorseFilt ? (
             <div>
               <button onClick={catFilter}>Saddle Pads</button>
-              <button onClick={earBonnetFilter} >Ear Bonnet</button>
+              <button onClick={earBonnetFilter}>Ear Bonnet</button>
+              <button onClick={haltersFilter}>Halters</button>
+              <button onClick={horseBlanketsFilter}>Horse Blankets</button>
+              <button onClick={horseBootsFilter}>Horse Boots</button>
+              <button onClick={legWrapsFilter}>Leg Wraps</button>
             </div>
           ) : (
             ""
           )}
-          <button>Rider</button>
+          <button onClick={openRiderFilter}>Rider</button>
+          {openRiderFilt ? (
+            <div>
+              <button onClick={topsFilter}>Tops</button>
+              <button onClick={ridingLegginsFilter}>Riding Leggins</button>
+              <button onClick={ridingJacketsFilter}>Riding Jackets</button>
+              <button onClick={ridingShowJacketsFilter}>
+                Riding Show Jackets
+              </button>
+              <button onClick={ridingGlovesFilter}>Riding Gloves</button>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
         <div className="Shop-Items">
           {products.map((e, index) => {
@@ -140,9 +190,16 @@ export default function Shop() {
                 <div className="Modal-cont">
                   <h1>{e.name}</h1>
                   <h3>{e.price}</h3>
-                  <button onClick={() => addCart(e.id)} className="btnn">
-                    Add to Cart
-                  </button>
+                  <div className="Modal-addToCart">
+                    <span>
+                      <button>-</button>
+                      <p>{e.count}</p>
+                      <button onClick={() => add(e.id)} >+</button>
+                    </span>
+                    <button onClick={() => addCart(e.id)} className="btnn">
+                      Add to Cart
+                    </button>
+                  </div>
                   <div className="icons">
                     <span>
                       <img
