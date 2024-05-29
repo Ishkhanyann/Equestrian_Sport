@@ -14,7 +14,7 @@
     gap: 20px;
     width: 80%;
     height: 600px;
-    outline: 2px solid #adadad;
+    outline: 2px solid $main-color-9;
     border-radius: 20px;
     font-size: 20px;
     line-height: 1.4;
@@ -35,7 +35,7 @@
         background-color: $main-color-6;
         width: 400px;
         height: 30px;
-        border-bottom: 2px solid gray;
+        border-bottom: 2px solid $main-color-9;
 
         &:focus {
           outline: none;
@@ -49,18 +49,33 @@
       .btn {
         margin-top: 50px;
         font-size: 20px;
-        border: 2px solid gray;
         text-align: center;
         padding: 0;
         border-radius: 10px;
         height: 50px;
+        padding: 10px;
+        border: 2px solid $main-color-9;
+        background-color: $main-color-11;
+        color: $main-color-1;
+        font-size: 18px;
+        font-family: $font-title;
 
         &:hover {
           cursor: pointer;
         }
       }
-    }
 
+      .Show-password{
+        position: relative;
+
+        img{
+          position: absolute;
+          top: -30px;
+          right: -400px;
+          width: 24px;
+        }
+      }
+    }
 
     .mask {
       width: 70%;
@@ -81,9 +96,9 @@
       .mask-img-bg{
         position: relative;
         width: 100%;
-        height: 630px;
+        height: 700px;
         object-fit: cover;
-        bottom: 116%;
+        bottom: 122%;
         border-radius: 0% 0% 50% 0%;
       }
     }

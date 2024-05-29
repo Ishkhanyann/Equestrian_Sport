@@ -1,12 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { act } from "react";
 
 const initialProductsValue = {
   originalData: [],
   data: [],
   item: [],
+  prods: [],
+  p: [],
   status: "idle",
   isPending: false,
 };
+
+localStorage.setItem("products", JSON.stringify(initialProductsValue.prods));
 
 export const fetchProducts = createAsyncThunk(
   "product/fetchProducts",
@@ -79,7 +84,9 @@ const productsSlice = createSlice({
       };
     },
     ridingLeggins: (state, action) => {
-      const cat = state.originalData.filter((e) => e.cat == "Riding Tights & Leggins");
+      const cat = state.originalData.filter(
+        (e) => e.cat == "Riding Tights & Leggins"
+      );
       return {
         ...state,
         data: cat ? cat : [],
@@ -107,55 +114,88 @@ const productsSlice = createSlice({
       };
     },
     addToCart: (state, action) => {
-      const itms = state.originalData.filter((e) => e.id == action.payload.id);
-      localStorage.setItem(action.payload.id, JSON.stringify(itms));
-    },
-    all: (state,action) => {
-      return {
+      const prodsStorage = JSON.parse(localStorage.getItem("products")) || [];
+      const itm = state.item.find((e) => e.id === action.payload.id);
+      if (itm && !prodsStorage.some((prod) => prod.id === itm.id)) {
+        prodsStorage.push(itm);
+      }
+      localStorage.setItem("products", JSON.stringify(prodsStorage));
+      return{
         ...state,
-        data: state.originalData
+        p:  prodsStorage
       }
     },
+    all: (state, action) => {
+      return {
+        ...state,
+        data: state.originalData,
+      };
+    },
     countPlusMinus: (state, action) => {
-      const id = action.payload; 
-      const updatedData = state.originalData.map(e => {
-        if (e.id === id) {
-          switch (action.type) {
+      const itm = state.item.map((e) => {
+        switch (action.payload.type) {
+          case "Plus":
+            return { ...e, count: e.count + 1 };
+          case "Minus":
+            return { ...e, count: e.count > 1 ? e.count - 1 : 1 };
+          default:
+            return e;
+        }
+      });
+      return {
+        ...state,
+        item: itm,
+      };
+    },
+    countPlusMinusCart: (state, action) => {
+      const prodsStorage = JSON.parse(localStorage.getItem("products")) || [];
+      const updatedProds = prodsStorage.map((e) => {
+        if (e.id === action.payload.id) {
+          switch (action.payload.type) {
             case "Plus":
-              return { ...e, count: (e.count || 0) + 1 };
+              return { ...e, count: e.count + 1 };
             case "Minus":
-              return { ...e, count: (e.count || 0) - 1 };
+              return { ...e, count: e.count > 1 ? e.count - 1 : 1 };
             default:
               return e;
           }
         }
-        return e;
+        return e; 
       });
-      return {
+      localStorage.setItem("products", JSON.stringify(updatedProds));
+      return{
         ...state,
-        data: updatedData
-      };
-    }, 
-  },   
+        p: updatedProds,
+      }
+    },
+    del: (state, action) => {
+      const prodsStorage = JSON.parse(localStorage.getItem("products")) || [];
+      const updatedProds = prodsStorage.filter(e => e.id !== action.payload.id)
+      localStorage.setItem("products", JSON.stringify(updatedProds));
+      return{
+        ...state,
+        p: updatedProds,
+      }
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state, action) => {
-        state.isPending = true, 
-        state.status = "pending";
+        (state.isPending = true), (state.status = "pending");
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
-        state.isPending = false,
-        state.status = "fulfilled",
-        state.data = action.payload;
+        (state.isPending = false),
+          (state.status = "fulfilled"),
+          (state.data = action.payload);
         state.originalData = action.payload;
       })
       .addCase(fetchProducts.rejected, (state, action) => {
-        state.isPending = false,
-        state.status = "rejected",
-        state.data = [];
-        state.originalData = []
+        (state.isPending = false),
+          (state.status = "rejected"),
+          (state.data = []);
+        state.originalData = [];
       });
-  }
+  },
 });
 
 export default productsSlice.reducer;
@@ -174,3 +214,5 @@ export const { ridingShowJackets } = productsSlice.actions;
 export const { ridingGloves } = productsSlice.actions;
 export const { all } = productsSlice.actions;
 export const { countPlusMinus } = productsSlice.actions;
+export const { countPlusMinusCart } = productsSlice.actions;
+export const { del } = productsSlice.actions;

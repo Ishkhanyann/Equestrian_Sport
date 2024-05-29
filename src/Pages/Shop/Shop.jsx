@@ -43,42 +43,6 @@ export default function Shop() {
   const openRiderFilter = () => {
     setOpenRiderFilt(!openRiderFilt);
   };
-  const catFilter = () => {
-    dispatch(saddlePads());
-  };
-  const earBonnetFilter = () => {
-    dispatch(earBonnet());
-  };
-  const haltersFilter = () => {
-    dispatch(halters());
-  };
-  const horseBlanketsFilter = () => {
-    dispatch(horseBlankets());
-  };
-  const horseBootsFilter = () => {
-    dispatch(horseBoots());
-  };
-  const legWrapsFilter = () => {
-    dispatch(legWraps());
-  };
-  const topsFilter = () => {
-    dispatch(tops());
-  };
-  const ridingLegginsFilter = () => {
-    dispatch(ridingLeggins());
-  };
-  const ridingJacketsFilter = () => {
-    dispatch(ridingJackets());
-  };
-  const ridingShowJacketsFilter = () => {
-    dispatch(ridingShowJackets());
-  };
-  const ridingGlovesFilter = () => {
-    dispatch(ridingGloves());
-  };
-  const allFilter = () => {
-    dispatch(all());
-  };
   const toogleModal = (id) => {
     setIsOpen(!isOpen);
     dispatch(showItem({ id: id }));
@@ -86,14 +50,14 @@ export default function Shop() {
   const addCart = (id) => {
     dispatch(addToCart({ id: id }));
   };
-  const add = (id) => {
-    dispatch(countPlusMinus({type:'Plus',  payload: id}))
-  }
+  const handleCountChange = (id, type) => {
+    dispatch(countPlusMinus({ id, type }));
+  };
   useEffect(() => {
     dispatch(fetchProducts("http://localhost:3001/media"));
   }, []);
 
-  console.log(products);
+  console.log(i);
 
   return (
     <div className="Shop">
@@ -108,16 +72,16 @@ export default function Shop() {
       <div className="Shop-Container">
         <div className="Shop-Cats">
           <span></span>
-          <button onClick={allFilter}>All</button>
+          <button onClick={() => dispatch(all())}>All</button>
           <button onClick={openHorseFilter}>Horses</button>
           {openHorseFilt ? (
             <div>
-              <button onClick={catFilter}>Saddle Pads</button>
-              <button onClick={earBonnetFilter}>Ear Bonnet</button>
-              <button onClick={haltersFilter}>Halters</button>
-              <button onClick={horseBlanketsFilter}>Horse Blankets</button>
-              <button onClick={horseBootsFilter}>Horse Boots</button>
-              <button onClick={legWrapsFilter}>Leg Wraps</button>
+              <button onClick={() => dispatch(saddlePads())}>Saddle Pads</button>
+              <button onClick={() => dispatch(earBonnet())}>Ear Bonnet</button>
+              <button onClick={() => dispatch(halters())}>Halters</button>
+              <button onClick={() => dispatch(horseBlankets())}>Horse Blankets</button>
+              <button onClick={() => dispatch(horseBoots())}>Horse Boots</button>
+              <button onClick={() => dispatch(legWraps())}>Leg Wraps</button>
             </div>
           ) : (
             ""
@@ -125,13 +89,11 @@ export default function Shop() {
           <button onClick={openRiderFilter}>Rider</button>
           {openRiderFilt ? (
             <div>
-              <button onClick={topsFilter}>Tops</button>
-              <button onClick={ridingLegginsFilter}>Riding Leggins</button>
-              <button onClick={ridingJacketsFilter}>Riding Jackets</button>
-              <button onClick={ridingShowJacketsFilter}>
-                Riding Show Jackets
-              </button>
-              <button onClick={ridingGlovesFilter}>Riding Gloves</button>
+              <button onClick={() => dispatch(tops())}>Tops</button>
+              <button onClick={() => dispatch(ridingLeggins())}>Riding Leggins</button>
+              <button onClick={() => dispatch(ridingJackets())}>Riding Jackets</button>
+              <button onClick={() => dispatch(ridingShowJackets())}>Riding Show Jackets</button>
+              <button onClick={() => dispatch(ridingGloves())}>Riding Gloves</button>
             </div>
           ) : (
             ""
@@ -160,7 +122,7 @@ export default function Shop() {
                 />
                 <span>
                   <p>{e.name}</p>
-                  <p>{e.price}</p>
+                  <p>${e.price}USD</p>
                 </span>
               </div>
             );
@@ -169,9 +131,9 @@ export default function Shop() {
       </div>
       {isOpen ? (
         <Modal toogleModal={toogleModal}>
-          {i.map((e) => {
+          {i.map((e, index) => {
             return (
-              <div className="Modal-container" key={e.id}>
+              <div className="Modal-container" key={index} >
                 <div className="Modal-img">
                   <img
                     src={e.img1}
@@ -189,12 +151,12 @@ export default function Shop() {
                 </div>
                 <div className="Modal-cont">
                   <h1>{e.name}</h1>
-                  <h3>{e.price}</h3>
+                  <h3>${e.price}USD</h3>
                   <div className="Modal-addToCart">
                     <span>
-                      <button>-</button>
+                      <button onClick={() => handleCountChange(e.id, "Minus")}>-</button>
                       <p>{e.count}</p>
-                      <button onClick={() => add(e.id)} >+</button>
+                      <button onClick={() => handleCountChange(e.id, "Plus")}>+</button>
                     </span>
                     <button onClick={() => addCart(e.id)} className="btnn">
                       Add to Cart
@@ -202,10 +164,7 @@ export default function Shop() {
                   </div>
                   <div className="icons">
                     <span>
-                      <img
-                        src="../../../public\Icons\delivery-truck.png"
-                        alt=""
-                      />
+                      <img src="../../../public\Icons\delivery-truck.png" />
                       <p>Express delivery within 1-3 days</p>
                     </span>
                     <span>
@@ -225,58 +184,15 @@ export default function Shop() {
                         <h3>Product details and fabric care</h3>
                       </button>
                       {openDet ? (
-                        <div className="det">
-                          {e.detail?.size ? (
-                            <p>
-                              {" "}
-                              <h3>Size: </h3> {e.detail?.size}{" "}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                          {e.details?.color ? (
-                            <p>
-                              <h3>Color:</h3> {e.details?.color}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                          {e.details?.detail ? (
-                            <p>
-                              <h3>Details:</h3> {e.details?.detail}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                          {e.details?.piping ? (
-                            <p>
-                              <h3>Piping:</h3> {e.details?.piping}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                          {e.details?.edgeborder ? (
-                            <p>
-                              <h3>Edge border:</h3> {e.details?.edgeborder}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                          {e.details?.material ? (
-                            <p>
-                              <h3>Material:</h3> {e.details?.material}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                          {e.details?.washing ? (
-                            <p>
-                              <h3>Washing:</h3> {e.details?.washing}
-                            </p>
-                          ) : (
-                            ""
-                          )}
-                        </div>
+                         <div className="det">
+                         {e.detail?.size && <p><h3>Size: </h3>{e.detail?.size}</p>}
+                         {e.details?.color && <p><h3>Color:</h3> {e.details?.color}</p>}
+                         {e.details?.detail && <p><h3>Details:</h3> {e.details?.detail}</p>}
+                         {e.details?.piping && <p><h3>Piping:</h3> {e.details?.piping}</p>}
+                         {e.details?.edgeborder && <p><h3>Edge border:</h3> {e.details?.edgeborder}</p>}
+                         {e.details?.material && <p><h3>Material:</h3> {e.details?.material}</p>}
+                         {e.details?.washing && <p><h3>Washing:</h3> {e.details?.washing}</p>}
+                       </div>
                       ) : null}
                     </div>
                   </div>

@@ -163,13 +163,14 @@ body {
 
       button {
         margin-top: 34px;
-        width: 180px;
-        height: 70px;
-        border-radius: 20px;
+        width: 300px;
+        border-radius: 10px;
+        height: 50px;
         font-size: 22px;
         font-weight: 600;
         font-family: $font-title;
-        background-color: $main-color-6;
+        color: $main-color-1;
+        background-color: $main-color-11;
         border: 2px solid $main-color-2;
       }
     }

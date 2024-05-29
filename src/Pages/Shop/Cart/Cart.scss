@@ -1,1 +1,107 @@
 @import "../../variables";
+
+.Cart {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 60px;
+
+  h1 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: 10%;
+    font-size: 40px;
+    color: $main-color-11;
+    font-family: $font-header;
+  }
+
+  .Cart-box {
+    height: 50px;
+    font-size: 24px;
+    color: $main-color-9;
+    line-height: 1.4;
+    display: flex;
+    margin-left: 10%;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    border: 1px solid black;
+    background-color: $main-color-2;
+
+    .f{
+      width: 500px;
+    }
+
+  }
+
+  .Cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main-color-2;
+    font-size: 24px;
+    color: $main-color-9;
+    line-height: 1.4;
+    margin-left: 10%;
+    width: 80%;
+    border: 1px solid black;
+
+    img {
+      padding: 10px;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    .Cart-Desc{
+      width: 300px;
+      padding: 10px;
+
+      p{
+        font-size: 20px;
+      }
+    }
+
+    .Cart-Count {
+      display: flex;
+      flex-direction: row;
+
+      span {
+        display: flex;
+        align-items: center;
+
+        button {
+          cursor: pointer;
+          width: 60px;
+          height: 36px;
+          border: none;
+          font-size: 24px;
+          background-color: $main-color-2
+        }
+      }
+    }
+
+    .Cart-total{
+      padding-left: 40px;
+      width: 130px;
+    }
+
+    .Cart-delete{
+      position: relative;
+      right: 3%;
+      top: -10px;
+
+      .delete{
+        position: absolute;
+        border: none;
+        cursor: pointer;
+        background: $main-color-2;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+  
+      }
+    }
+    
+  }
+}
