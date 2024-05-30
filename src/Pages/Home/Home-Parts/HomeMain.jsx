@@ -1,20 +1,20 @@
-import React from 'react'
-import "../../Home/Home.scss"
+import React from "react";
+import "../../Home/Home.scss";
 
 export default function HomeMain() {
   return (
     <div className="Home-main">
-    <div className="Home-title">
-      <h1>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
-        non.
-      </h1>
-      <span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-        itaque nam vero ullam beatae aliquid illo, facilis omnis in sed
-        minima corporis magni est ipsa, repellat veritatis pariatur at.
-      </span>
+      <div className="Home-title">
+        <h2>
+          Gallop Towards Greatness. <p>Ride with Trequus Capital</p>
+        </h2>
+        <span>
+          "Welcome to the majestic world of horses! Whether you're a seasoned
+          equestrian or just beginning your journey into the enchanting realm of
+          these magnificent creatures, our website is your ultimate destination
+          for all things equine.
+        </span>
+      </div>
     </div>
-  </div>
-  )
+  );
 }

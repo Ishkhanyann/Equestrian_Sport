@@ -5,13 +5,12 @@ export default function CoursesMain() {
   return (
     <div className="CoursesMain">
       <div className="CoursesMain-Title">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        </h1>
+        <h1>Saddle Up: Explore the World of Horse Riding Adventures</h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
-          nobis, cumque ipsa at esse vel voluptas error recusandae, iure illum
-          beatae perspiciatis quis mollitia quo vero non? Sint, neque saepe!
+          Join our vibrant community of horse lovers from around the globe and
+          share your passion for these magnificent creatures. From leisurely
+          trail rides to exhilarating show jumping competitions, there's
+          something for every rider to enjoy.
         </p>
       </div>
       <div className="CoursesMain-Img">

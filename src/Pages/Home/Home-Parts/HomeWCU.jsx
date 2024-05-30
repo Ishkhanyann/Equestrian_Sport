@@ -5,52 +5,51 @@ export default function HomeWCU() {
   const [about] = useState([
     {
       id: 1,
-      icon: "../../../public/Icons/3524659.png",
-      title: `Lorem ipsum dolor sit amet.`,
-      desc: `Lorem ipsum dolor sit 
-      amet consectetur adipisicing elit. 
-      Ratione unde officiis sit tempore animi 
-      praesentium exercitationem magni iste! 
-      Amet, quibusdam?`,
+      icon: "../../../public/Icons/rating.png",
+      title: `Expertise`,
+      desc: `Our team comprises experienced 
+      professionals dedicated to all things 
+      equine, providing unparalleled knowledge 
+      in horse care, training, and more.`,
     },
     {
       id: 2,
-      title: `Lorem ipsum dolor sit amet.`,
-      desc: `Lorem ipsum dolor sit 
-      amet consectetur adipisicing elit. 
-      Ratione unde officiis sit tempore animi 
-      praesentium exercitationem magni iste! 
-      Amet, quibusdam?`,
+      title: `Why Choose Us?`,
+      desc: `Choose us for horse riding because 
+      we prioritize safety with expert instruction 
+      nd well-trained horses. Our diverse programs 
+      cater to all skill levels, offering an 
+      enjoyable experience for everyone. `,
     },
     {
       id: 3,
-      icon: "../../../public/Icons/3524659.png",
-      title: `Lorem ipsum dolor sit amet.`,
-      desc: `Lorem ipsum dolor sit 
-      amet consectetur adipisicing elit. 
-      Ratione unde officiis sit tempore animi 
-      praesentium exercitationem magni iste! 
-      Amet, quibusdam?`,
+      icon: "../../../public/Icons/community.png",
+      title: `Diversity`,
+      desc: `We celebrate the vast diversity 
+      within the horse world, offering insights 
+      into various breeds, disciplines, and 
+      cultural aspects surrounding these 
+      majestic animals.`,
     },
     {
       id: 4,
-      icon: "../../../public/Icons/3524659.png",
-      title: `Lorem ipsum dolor sit amet.`,
-      desc: `Lorem ipsum dolor sit 
-      amet consectetur adipisicing elit. 
-      Ratione unde officiis sit tempore animi 
-      praesentium exercitationem magni iste! 
-      Amet, quibusdam?`,
+      icon: "../../../public/Icons/communities.png",
+      title: `Community`,
+      desc: `Join our inclusive community of 
+      horse enthusiasts, where you can seek 
+      advice, share stories, and connect 
+      with like-minded individuals passionate 
+      about horses.`,
     },
     {
       id: 5,
-      icon: "../../../public/Icons/3524659.png",
-      title: `Lorem ipsum dolor sit amet.`,
-      desc: `Lorem ipsum dolor sit 
-      amet consectetur adipisicing elit. 
-      Ratione unde officiis sit tempore animi 
-      praesentium exercitationem magni iste! 
-      Amet, quibusdam?`,
+      icon: "../../../public/Icons/creativity.png",
+      title: `Inspiration`,
+      desc: `Get inspired by the beauty 
+      and grace of horses through our 
+      engaging content, including captivating 
+      imagery, heartwarming stories, and 
+      informative articles.`,
     },
   ]);
   return (

@@ -12,22 +12,22 @@ export default function Footer() {
     {
       id:1,
       name: "Club",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro!",
+      desc: "Welcome to Trequus Capital, where equestrian enthusiasts come together to share their passion for horses. ",
     },
     {
       id:2,
       name: "Navigation",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro!",
+      desc: "Trequus Capital-789 Bridle Path Road-Santa Barbara, California 93101",
     },
     {
       id:3,
       name: "Information",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro!",
+      desc: "Phone: +1 (123) 456-7890  Email: info@greenmeadowsstables.com",
     },
     {
       id:4,
       name: "Opening Hours",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, porro!",
+      desc: "Monday - Friday: 8:00 AM - 8:00 PM -Saturday - Sunday: 9:00 AM - 6:00 PM",
     },
   ]);
 

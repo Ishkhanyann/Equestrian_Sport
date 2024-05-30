@@ -100,7 +100,7 @@
       h1 {
         font-family: $font-header;
         font-weight: 700;
-        padding-bottom: 60px;
+        padding-bottom: 20px;
         color: $main-color-9;
       }
 
@@ -157,8 +157,12 @@
         width: 50px;
       }
 
+      h4{
+        padding-top: 26px;
+      }
+
       p{
-        padding-top: 30px;
+        padding-top: 10px;
       }
     }
   }

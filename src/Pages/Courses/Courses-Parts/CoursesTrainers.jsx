@@ -10,6 +10,7 @@ export default function CoursesTrainers() {
 
   return (
     <div className="CoursesTrainers">
+      <h1>Meet Our Team of Expert Horse Riding Trainers</h1>
       {trainer.map((e) => {
         return (
           <div className="trainer" key={e.id}>

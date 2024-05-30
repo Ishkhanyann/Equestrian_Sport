@@ -9,17 +9,17 @@ export default function AboutUsAbout() {
       </div>
       <div className="AboutUs-Container">
         <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Proud Achievements: Celebrating Milestones at Our Horse Riding Hub
         </h1>
         <div className="AboutUs-zrt">
           <span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            voluptas molestias, culpa corrupti ut aliquam quae, optio
-            praesentium suscipit libero nostrum eum. Odit, distinctio ducimus!
-            Porro eveniet consectetur nemo totam? Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Cupiditate voluptas molestias, culpa
-            corrupti ut aliquam quae, optio praesentium suscipit libero nostrum
-            eum. Odit, distinctio ducimus! Porro eveniet consectetur nemo totam?
+            From fostering confident riders to championing equestrian
+            excellence, our achievements stand as a testament to our commitment
+            to the equestrian community. With accolades in safety standards,
+            rider development, and community engagement, we continue to push
+            boundaries and inspire a love for horses in all who visit our hub.
+            Join us as we celebrate our milestones and embark on new horizons in
+            the world of horse riding.
           </span>
         </div>
         <div className="AboutUs-numbers">

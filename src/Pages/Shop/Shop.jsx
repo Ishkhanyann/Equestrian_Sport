@@ -62,20 +62,19 @@ export default function Shop() {
   return (
     <div className="Shop">
       <div className="Shop-Header">
-        <h1>Lorem ipsum dolor sit amet.</h1>
+        <h1>Gallop into Greatness: Explore Our Horse Shop Collection!</h1>
         <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-          blanditiis dignissimos enim et aperiam quidem a ipsa cupiditate iure
-          sit!
+        The highly awaited collection, adorned in 
+        soft pink, delicate lilac, and warm rose 
+        gold details, has returned to captivate your senses.
         </span>
       </div>
       <div className="Shop-Container">
         <div className="Shop-Cats">
-          <span></span>
           <button onClick={() => dispatch(all())}>All</button>
           <button onClick={openHorseFilter}>Horses</button>
           {openHorseFilt ? (
-            <div>
+            <div className="horses-shop">
               <button onClick={() => dispatch(saddlePads())}>Saddle Pads</button>
               <button onClick={() => dispatch(earBonnet())}>Ear Bonnet</button>
               <button onClick={() => dispatch(halters())}>Halters</button>
@@ -88,7 +87,7 @@ export default function Shop() {
           )}
           <button onClick={openRiderFilter}>Rider</button>
           {openRiderFilt ? (
-            <div>
+            <div className="rider-shop">
               <button onClick={() => dispatch(tops())}>Tops</button>
               <button onClick={() => dispatch(ridingLeggins())}>Riding Leggins</button>
               <button onClick={() => dispatch(ridingJackets())}>Riding Jackets</button>

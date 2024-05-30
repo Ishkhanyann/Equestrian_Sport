@@ -10,19 +10,14 @@ export default function AboutUsHeader() {
         <img src="../../../public/E/A-main_LE_photos_v2_x2.jpg" alt="" />
       </div>
       <div className="AboutUs-main">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-          commodi.
-        </h1>
+        <h1>Ride Beyond: Your Premier Horse Riding Destination</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-          voluptates porro hic repellendus recusandae necessitatibus? Animi nemo
-          earum tenetur, ipsum voluptas sit minus delectus ad in quibusdam,
-          voluptatibus, natus assumenda.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus
-          voluptates porro hic repellendus recusandae necessitatibus? Animi nemo
-          earum tenetur, ipsum voluptas sit minus delectus ad in quibusdam,
-          voluptatibus, natus assumenda.
+          At Ride Beyond, we're passionate about bringing the joy of horse
+          riding to enthusiasts of all levels. Our experienced team offers
+          expert instruction in a safe and welcoming environment, ensuring
+          memorable experiences for every rider. Join us on a journey where the
+          beauty of nature meets the thrill of horseback riding, and let's
+          create unforgettable moments together.
         </p>
       </div>
     </div>

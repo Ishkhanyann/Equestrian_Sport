@@ -25,14 +25,19 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: start;
-      color: $main-color-2;
+      color: $main-color-10;
       font-size: 22px;
 
-      h1 {
+      h2 {
         font-family: $font-header;
+
+        p{
+          display: inline-block;
+          color: $main-color-7;
+        }
       }
 
-      h1,
+      h2,
       span {
         padding-left: 50px;
         padding-top: 20px;
