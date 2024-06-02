@@ -177,6 +177,11 @@ body {
         color: $main-color-1;
         background-color: $main-color-11;
         border: 2px solid $main-color-2;
+
+        a{
+          text-decoration: none;
+          color: $main-color-1;
+        }
       }
     }
   }

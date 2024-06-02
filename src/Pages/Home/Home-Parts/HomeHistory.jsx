@@ -1,4 +1,6 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import "../../Home/Home.scss";
 
 export default function HomeHistory() {
@@ -19,15 +21,14 @@ export default function HomeHistory() {
       <div className="Home-Text-Container">
         <h1>Expert guidance, safe rides. Join the adventure!</h1>
         <div className="Home-Text">
-        At our horse riding center, we prioritize 
-        safety without compromising on the thrill 
-        and adventure of riding. Our experienced 
-        instructors are dedicated to helping you 
-        build confidence in the saddle while 
-        fostering a deep connection with these 
-        majestic animals. 
+          At our horse riding center, we prioritize safety without compromising
+          on the thrill and adventure of riding. Our experienced instructors are
+          dedicated to helping you build confidence in the saddle while
+          fostering a deep connection with these majestic animals.
         </div>
-        <button>Read More</button>
+        <button>
+          <Link to="/AboutUs"> Read More </Link>
+        </button>
       </div>
     </div>
   );
