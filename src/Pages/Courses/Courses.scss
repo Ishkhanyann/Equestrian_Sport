@@ -1,6 +1,5 @@
 @import "../variables";
 
-
 body {
   box-sizing: border-box;
   background-color: $main-color-7;
@@ -126,7 +125,7 @@ body {
     height: 800px;
     position: relative;
 
-    h1{
+    h1 {
       margin-bottom: 40px;
       text-align: center;
     }
@@ -174,10 +173,17 @@ body {
     }
   }
 
-  .Courses-slider {
-    margin-top: 90px;
+  .Courses-Video {
+    text-align: center;
 
-    .slick-slider{
+    video {
+      rotate: 90deg;
+    }
+  }
+
+  .Courses-slider {
+
+    .slick-slider {
       position: relative;
 
       .slick-list {
@@ -186,10 +192,10 @@ body {
         padding: 0;
       }
 
-      .slick-track{
+      .slick-track {
         display: flex;
 
-        .slick-slide{
+        .slick-slide {
           padding: 30px;
           position: relative;
 
@@ -202,14 +208,14 @@ body {
             border-radius: 10px;
             width: 200px;
             height: 300px;
-      
+
             h1 {
               font-size: 24px;
               color: $main-color-9;
               margin-bottom: 15px;
               font-family: $font-header;
             }
-      
+
             p {
               font-family: $font-title;
               line-height: 1.4;

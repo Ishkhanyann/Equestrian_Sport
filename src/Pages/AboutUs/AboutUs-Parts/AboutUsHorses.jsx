@@ -72,7 +72,7 @@ export default function AboutUsHorses() {
     {
       id: 6,
       name: "Tom Fool",
-      img: "../../../public/E/A-horse6.JPG",
+      img: "../../../public/E/A-horse7.jpeg",
       pedigree: {
         1: "Nemow", 
         2: "Gaga", 
