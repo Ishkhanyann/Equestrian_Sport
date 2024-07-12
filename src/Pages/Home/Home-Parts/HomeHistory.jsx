@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import "../../Home/Home.scss";
 
@@ -8,7 +7,7 @@ export default function HomeHistory() {
     <div className="Home-History">
       <div className="Home-imgs">
         <img
-          className="Home-image1"
+          className="Home-image1 move1"
           src="../../../public/E/H-about1_LE_photos_v2_x2.jpg"
           alt=""
         />
